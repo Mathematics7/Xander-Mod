@@ -420,35 +420,6 @@ xmutil.clone("electric-turret", "laser-turret",
 		drain = "120kW",
 		usage_priority = "primary-input"
 	},
-	base_picture = {
-    layers = {
-      {
-        direction_count = 1,
-        filename = "__xander-mod-v1__/graphics/entity/combat/laser-turret-3/base.png",
-        frame_count = 1,
-        height = 52,
-        hr_version = {
-          direction_count = 1,
-          filename = "__xander-mod-v1__/graphics/entity/combat/laser-turret-3/hr-base.png",
-          frame_count = 1,
-          height = 104,
-          priority = "high",
-          scale = 0.5,
-          shift = {
-            -0.015625,
-            0.0625
-          },
-          width = 138
-        },
-        priority = "high",
-        shift = {
-          0,
-          0.0625
-        },
-        width = 70
-      }
-    }
-  },
   attack_parameters = {
     ammo_type = {
       action = {

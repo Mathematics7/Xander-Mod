@@ -169,8 +169,12 @@ xmutil.clone("boiler", "boiler",
 xmutil.clone("generator", "steam-turbine",
 	{
 		{
-			"__base__/graphics/entity/steam-turbine/steam-turbine-",
-			"__xander-mod-v1__/graphics/entity/production/steam-turbine-2/",
+			"__base__/graphics/entity/steam-turbine/(h?r?-?)steam-turbine-V.png",
+			"__xander-mod-v1__/graphics/entity/production/steam-turbine-2/%1V.png",
+		},
+		{
+			"__base__/graphics/entity/steam-turbine/(h?r?-?)steam-turbine-H.png",
+			"__xander-mod-v1__/graphics/entity/production/steam-turbine-2/%1H.png",
 		},
 	},
 	{
