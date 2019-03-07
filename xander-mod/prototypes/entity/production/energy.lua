@@ -246,16 +246,8 @@ xmutil.clone("accumulator", "accumulator",
 			"__xander-mod-v1__/graphics/item/production/energy/accumulator-2.png",
 		},
 		{
-			"__base__/graphics/entity/accumulator/accumulator.png",
-			"__xander-mod-v1__/graphics/entity/production/accumulator-2/2.png",
-		},
-		{
-			"__base__/graphics/entity/accumulator/accumulator-charge-animation.png",
-			"__xander-mod-v1__/graphics/entity/production/accumulator-2/charge.png",
-		},
-		{
-			"__base__/graphics/entity/accumulator/accumulator-discharge-animation.png",
-			"__xander-mod-v1__/graphics/entity/production/accumulator-2/discharge.png",
+			"__base__/graphics/entity/accumulator/(h?r?-?)accumulator.png",
+			"__xander-mod-v1__/graphics/entity/production/accumulator-2/%1accumulator-2.png",
 		},
 	},
 	{

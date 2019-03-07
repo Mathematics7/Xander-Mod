@@ -312,7 +312,20 @@ xmutil.clone("gate", "gate",
 --Base "laser-turret" placeholder
 --CO2 Laser Turret
 xmutil.clone("electric-turret", "laser-turret",
-	{},
+{
+	{
+    "__base__/graphics/entity/laser-turret/(h?r?-?)laser-turret-base.png",
+    "__xander-mod-v1__/graphics/entity/combat/laser-turret-2/%1base.png"
+  },
+  {
+    "__base__/graphics/entity/laser-turret/(h?r?-?)laser-turret-shooting.png",
+    "__xander-mod-v1__/graphics/entity/combat/laser-turret-2/%1shooting.png"
+  },
+  {
+    "__base__/graphics/entity/laser-turret/(h?r?-?)laser-turret-raising.png",
+    "__xander-mod-v1__/graphics/entity/combat/laser-turret-2/%1raising.png"
+  },
+},
 {
 	type = "electric-turret",
 	name = "laser-turret-2",
@@ -336,35 +349,6 @@ xmutil.clone("electric-turret", "laser-turret",
 		drain = "60kW",
 		usage_priority = "primary-input"
 	},
-	base_picture = {
-    layers = {
-      {
-        direction_count = 1,
-        filename = "__xander-mod-v1__/graphics/entity/combat/laser-turret-2/base.png",
-        frame_count = 1,
-        height = 52,
-        hr_version = {
-          direction_count = 1,
-          filename = "__xander-mod-v1__/graphics/entity/combat/laser-turret-2/hr-base.png",
-          frame_count = 1,
-          height = 104,
-          priority = "high",
-          scale = 0.5,
-          shift = {
-            -0.015625,
-            0.0625
-          },
-          width = 138
-        },
-        priority = "high",
-        shift = {
-          0,
-          0.0625
-        },
-        width = 70
-      }
-    }
-  },
 	attack_parameters = {
     ammo_type = {
       action = {
@@ -399,7 +383,20 @@ xmutil.clone("electric-turret", "laser-turret",
 ),
 --Nd:YAG Laser Turret
 xmutil.clone("electric-turret", "laser-turret",
-	{},
+{
+  {
+    "__base__/graphics/entity/laser-turret/(h?r?-?)laser-turret-base.png",
+    "__xander-mod-v1__/graphics/entity/combat/laser-turret-3/%1base.png"
+  },
+  {
+    "__base__/graphics/entity/laser-turret/(h?r?-?)laser-turret-shooting.png",
+    "__xander-mod-v1__/graphics/entity/combat/laser-turret-3/%1shooting.png"
+  },
+  {
+    "__base__/graphics/entity/laser-turret/(h?r?-?)laser-turret-raising.png",
+    "__xander-mod-v1__/graphics/entity/combat/laser-turret-3/%1raising.png"
+  },
+},
 {
 	type = "electric-turret",
 	name = "laser-turret-3",
@@ -583,7 +580,32 @@ xmutil.clone("radar", "radar",
 --Base "tank" placeholder
 --Artillery Crawler
 xmutil.clone("car", "tank",
-	{},
+	{
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-1.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-2/%1base-1.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-2.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-2/%1base-2.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-3.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-2/%1base-3.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-4.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-2/%1base-4.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-turret.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-2/%1turret.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-turret-mask.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-2/%1turret-mask.png",
+    },
+  },
 	{
 		name = "artillery-crawler",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/artillery-crawler.png",
@@ -596,7 +618,32 @@ xmutil.clone("car", "tank",
 ),
 --Tank Mark 2
 xmutil.clone("car", "tank",
-	{},
+  {
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-1.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-3/%1base-1.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-2.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-3/%1base-2.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-3.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-3/%1base-3.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-base-4.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-3/%1base-4.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-turret.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-3/%1turret.png",
+    },
+    {
+      "__base__/graphics/entity/tank/(h?r?-?)tank-turret-mask.png",
+      "__xander-mod-v1__/graphics/entity/combat/tank-3/%1turret-mask.png",
+    },
+  },
 	{
 		name = "tank-2",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/tank-2.png",

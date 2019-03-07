@@ -20,6 +20,10 @@ data:extend{
 --High-Tension Medium Electric Pole
 xmutil.clone("electric-pole", "medium-electric-pole",
 	{
+		{
+			"__base__/graphics/entity/medium-electric-pole/(h?r?-?)medium-electric-pole.png",
+			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1medium-2.png",
+		},
 	},
 	{
 		name = "medium-electric-pole-2",
@@ -28,13 +32,16 @@ xmutil.clone("electric-pole", "medium-electric-pole",
 		max_health = 200,
 		maximum_wire_distance = 15,
 		supply_area_distance = 6.5,
-		pictures = { filename = "__xander-mod-v1__/graphics/entity/logistic/pylon/medium-2.png" },
 	}
 ),
 --Base "big-electric-pole" placeholder
 --High-Tension Big Electric Pole
 xmutil.clone("electric-pole", "big-electric-pole",
 	{
+		{
+			"__base__/graphics/entity/big-electric-pole/(h?r?-?)big-electric-pole.png",
+			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1big-2.png",
+		},
 	},
 	{
 		name = "big-electric-pole-2",
@@ -43,13 +50,16 @@ xmutil.clone("electric-pole", "big-electric-pole",
 		max_health = 400,
 		maximum_wire_distance = 60,
 		supply_area_distance = 2,
-		pictures = { filename = "__xander-mod-v1__/graphics/entity/logistic/pylon/big-2.png" },
 	}
 ),
 --Base "substation" placeholder
 --High-Tension Substation
 xmutil.clone("electric-pole", "substation",
 	{
+		{
+			"__base__/graphics/entity/substation/(h?r?-?)substation.png",
+			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1substation-2.png",
+		},
 	},
 	{
 		name = "substation-2",
@@ -58,7 +68,6 @@ xmutil.clone("electric-pole", "substation",
 		max_health = 400,
 		maximum_wire_distance = 30,
 		supply_area_distance = 15,
-		pictures = { filename = "__xander-mod-v1__/graphics/entity/logistic/pylon/substation-2.png" },
 	}
 ),
 
