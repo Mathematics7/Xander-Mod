@@ -2,17 +2,17 @@
 --Base Overrides
 
 --coal
-data.raw["autoplace-control"]["coal"].order = "02"
+data.raw["autoplace-control"]["coal"].order = "b-c"
 --copper-ore
-data.raw["autoplace-control"]["copper-ore"].order = "03"
+data.raw["autoplace-control"]["copper-ore"].order = "b-d"
 --crude-oil
-data.raw["autoplace-control"]["crude-oil"].order = "04"
+data.raw["autoplace-control"]["crude-oil"].order = "b-f"
 --iron-ore
-data.raw["autoplace-control"]["iron-ore"].order = "03"
+data.raw["autoplace-control"]["iron-ore"].order = "b-e"
 --uranium-ore
-data.raw["autoplace-control"]["uranium-ore"].order = "12"
+data.raw["autoplace-control"]["uranium-ore"].order = "b-n"
 --stone
-data.raw["autoplace-control"]["stone"].order = "13"
+data.raw["autoplace-control"]["stone"].order = "b-o"
 
 
 data:extend(
@@ -23,7 +23,7 @@ data:extend(
 	type = "autoplace-control",
 	name = "apatite",
 	richness = true,
-	order = "00",
+	order = "b-a",
 	category = "resource",
 },
 --Bauxite
@@ -31,21 +31,23 @@ data:extend(
 	type = "autoplace-control",
 	name = "bauxite",
 	richness = true,
-	order = "01",
+	order = "b-b",
 	category = "resource",
 },
 --Base "coal" placeholder
-	--order = "02"
+	--order = "b-c"
 --Base "copper-ore" placeholder
-	--order = "03"
+	--order = "b-d"
+--Base "iron-ore" placeholder
+	--order = "b-e"
 --Base "crude-oil" placeholder
-	--order = "04"
+	--order = "b-f"
 --Garnierite
 {
 	type = "autoplace-control",
 	name = "garnierite",
 	richness = true,
-	order = "05",
+	order = "b-g",
 	category = "resource",
 },
 --Granitic Ore
@@ -53,7 +55,7 @@ data:extend(
 	type = "autoplace-control",
 	name = "granitic-ore",
 	richness = true,
-	order = "06",
+	order = "b-h",
 	category = "resource",
 },
 --Heavy Mineral Sand
@@ -61,18 +63,16 @@ data:extend(
 	type = "autoplace-control",
 	name = "heavy-sand",
 	richness = true,
-	order = "07",
+	order = "b-i",
 	category = "resource",
 },
---Base "iron-ore" placeholder
-	--order = "08"
 --Lead Ore
 {
 	type = "autoplace-control",
 	name = "lead-ore",
 	richness = true,
 	category = "resource",
-	order = "09",
+	order = "b-k",
 	category = "resource",
 },
 --Mineral Water
@@ -80,7 +80,7 @@ data:extend(
 	type = "autoplace-control",
 	name = "mineral-water",
 	richness = true,
-	order = "10",
+	order = "b-l",
 	category = "resource",
 },
 --Natural Gas
@@ -88,19 +88,19 @@ data:extend(
 	type = "autoplace-control",
 	name = "natural-gas",
 	richness = true,
-	order = "11",
+	order = "b-m",
 	category = "resource",
 },
 --Base "uranium-ore" placeholder
-	--order = "12"
+	--order = "b-n"
 --Base "stone" placeholder
-	--order = "13"
+	--order = "b-o"
 --Sulfidic Ore
 {
 	type = "autoplace-control",
 	name = "sulfidic-ore",
 	richness = true,
-	order = "14",
+	order = "b-p",
 	category = "resource",
 }
 
