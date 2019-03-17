@@ -4,14 +4,16 @@ local xmutil = require("xmutil")
 
 --Base "small-electric-pole"
 data.raw["electric-pole"]["small-electric-pole"].max_health = 50
+data.raw["electric-pole"]["small-electric-pole"].next_upgrade = "medium-electric-pole"
 
 --Base "medium-electric-pole"
 
 --Base "big-electric-pole" placeholder
 data.raw["electric-pole"]["big-electric-pole"].max_health = 200
+data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = "big-electric-pole"
 
 --Base "substation" placeholder
-
+data.raw["electric-pole"]["substation"].fast_replaceable_group = "substation"
 
 data:extend{
 
@@ -22,7 +24,7 @@ xmutil.clone("electric-pole", "medium-electric-pole",
 	{
 		{
 			"__base__/graphics/entity/medium-electric-pole/(h?r?-?)medium-electric-pole.png",
-			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1medium-2.png",
+			"__xander-v1-graphics__/graphics/entity/logistic/pylon/%1medium-2.png",
 		},
 	},
 	{
@@ -40,7 +42,7 @@ xmutil.clone("electric-pole", "big-electric-pole",
 	{
 		{
 			"__base__/graphics/entity/big-electric-pole/(h?r?-?)big-electric-pole.png",
-			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1big-2.png",
+			"__xander-v1-graphics__/graphics/entity/logistic/pylon/%1big-2.png",
 		},
 	},
 	{
@@ -58,7 +60,7 @@ xmutil.clone("electric-pole", "substation",
 	{
 		{
 			"__base__/graphics/entity/substation/(h?r?-?)substation.png",
-			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1substation-2.png",
+			"__xander-v1-graphics__/graphics/entity/logistic/pylon/%1substation-2.png",
 		},
 	},
 	{
@@ -72,3 +74,14 @@ xmutil.clone("electric-pole", "substation",
 ),
 
 }
+
+
+
+--Base "medium-electric-pole"
+data.raw["electric-pole"]["medium-electric-pole"].next_upgrade = "medium-electric-pole-2"
+
+--Base "big-electric-pole" placeholder
+data.raw["electric-pole"]["big-electric-pole"].next_upgrade = "big-electric-pole-2"
+
+--Base "substation" placeholder
+data.raw["electric-pole"]["substation"].next_upgrade = "substation-2"

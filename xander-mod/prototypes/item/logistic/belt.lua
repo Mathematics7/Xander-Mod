@@ -27,10 +27,13 @@ data.raw.item["express-splitter"].order = "11"
 
 --Base "loader"
 data.raw.item["loader"].order = "12"
+data.raw.item["loader"].flags = nil
 --Base "fast-loader"
 data.raw.item["fast-loader"].order = "13"
+data.raw.item["fast-loader"].flags = nil
 --Base "express-loader"
 data.raw.item["express-loader"].order = "15"
+data.raw.item["express-loader"].flags = nil
 
 
 data:extend(

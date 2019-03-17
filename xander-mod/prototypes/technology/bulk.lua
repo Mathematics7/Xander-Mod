@@ -19,7 +19,7 @@ data.raw.technology["concrete"].order = "02-20"
 --Base "landfill"
 data.raw.technology["landfill"].icon = "__xander-mod-v1__/graphics/technology/bulk/landfill.png"
 data.raw.technology["landfill"].icon_size = 128
-data.raw.technology["landfill"].prerequisites = {"bauxite-sediment"}
+data.raw.technology["landfill"].prerequisites = {"bauxite-sediment", "logistic-science-pack"}
 data.raw.technology["landfill"].effects = {{type = "unlock-recipe", recipe = "landfill"}, {type = "unlock-recipe", recipe = "modified-a"}}
 data.raw.technology["landfill"].order = "02-21"
 	
@@ -196,7 +196,7 @@ data:extend(
 			recipe = "forging-alloy-b"
 		}
 	},
-	prerequisites = {"forging-alloy-a", "chromium-refining", "cobalt-refining"},
+	prerequisites = {"forging-alloy-a", "chromium-refining", "cobalt-refining", "production-science-pack"},
 	unit =
 	{
 		count = 400,
@@ -254,7 +254,7 @@ data:extend(
 			recipe = "forging-titanium"
 		}
 	},
-	prerequisites = {"titanium-refining", "aluminum-refining", "vanadium-refining"},
+	prerequisites = {"titanium-refining", "aluminum-refining", "vanadium-refining", "production-science-pack"},
 	unit =
 	{
 		count = 300,
@@ -479,16 +479,12 @@ data:extend(
 			type = "unlock-recipe",
 			recipe = "furnace-4-b"
 		},
-        {
-			type = "unlock-recipe",
-			recipe = "furnace-4-2p-b"
-		},
 		{
 			type = "unlock-recipe",
 			recipe = "furnace-5-b"
 		}
 	},
-	prerequisites = {"brick-clay", "chromium-refining", "magnesium-processing"},
+	prerequisites = {"brick-clay", "chromium-refining", "magnesium-processing", "chemical-science-pack"},
 	unit =
 	{
 		count = 350,
@@ -569,7 +565,7 @@ data:extend(
 			recipe = "cement-b"
 		}
 	},
-	prerequisites = {"cement-a", "slag-use"},
+	prerequisites = {"cement-a", "slag-use", "production-science-pack"},
 	unit =
 	{
 		count = 350,
@@ -605,7 +601,7 @@ data:extend(
 			recipe = "modified-b"
 		}
 	},
-	prerequisites = {"landfill", "slag-use"},
+	prerequisites = {"landfill", "slag-use", "production-science-pack"},
 	unit =
 	{
 		count = 250,
@@ -660,7 +656,7 @@ data:extend(
 			recipe = "basalt-b"
 		}
 	},
-	prerequisites = {"basalt-a", "slag-use"},
+	prerequisites = {"basalt-a", "slag-use", "production-science-pack"},
 	unit =
 	{
 		count = 400,
@@ -696,7 +692,7 @@ data:extend(
 			recipe = "leblanc-process"
 		}
 	},
-	prerequisites = {"sulfuric-acid-a", "reactor_1"},
+	prerequisites = {"sulfuric-acid-a", "reactor_1", "logistic-science-pack"},
 	unit =
 	{
 		count = 80,
@@ -722,7 +718,7 @@ data:extend(
 			recipe = "solvay-process"
 		}
 	},
-	prerequisites = {"sodium-processing", "haber-process"},
+	prerequisites = {"sodium-processing", "haber-process", "chemical-science-pack"},
 	unit =
 	{
 		count = 300,
@@ -819,7 +815,7 @@ data:extend(
 			recipe = "nitride-block"
 		}
 	},
-	prerequisites = {"acheson-process", "air-processing"},
+	prerequisites = {"acheson-process", "air-processing", "production-science-pack"},
 	unit =
 	{
 		count = 500,
@@ -873,7 +869,7 @@ data:extend(
 			recipe = "electrolysis-water-b"
 		}
 	},
-	prerequisites = {"electrolysis-water-a", "sodium-processing"},
+	prerequisites = {"electrolysis-water-a", "sodium-processing", "chemical-science-pack"},
 	unit =
 	{
 		count = 200,
@@ -934,7 +930,7 @@ data:extend(
 			recipe = "kvaerner-process"
 		}
 	},
-	prerequisites = {"carbon-processing", "oil-processing"},
+	prerequisites = {"carbon-processing", "oil-processing", "chemical-science-pack"},
 	unit =
 	{
 		count = 500,
@@ -995,7 +991,7 @@ data:extend(
 			recipe = "sand-recovery"
 		}
 	},
-	prerequisites = {"acheson-process", "carbon-processing"},
+	prerequisites = {"acheson-process", "carbon-processing", "utility-science-pack"},
 	unit =
 	{
 		count = 500,
@@ -1031,7 +1027,7 @@ data:extend(
 			recipe = "ultrapure-powder"
 		}
 	},
-	prerequisites = {"silicon-boule-a", "electrolysis-salt-water"},
+	prerequisites = {"silicon-boule-a", "electrolysis-salt-water", "utility-science-pack"},
 	unit =
 	{
 		count = 800,
@@ -1123,7 +1119,7 @@ data:extend(
 			recipe = "nitric-sulfuric"
 		}
 	},
-	prerequisites = {"sulfuric-acid-a"},
+	prerequisites = {"sulfuric-acid-a", "automation-science-pack"},
 	unit =
 	{
 		count = 50,
@@ -1298,7 +1294,7 @@ data:extend(
 			recipe = "slag-cracking"
 		}
 	},
-	prerequisites = {"carbon-oxides", "calcium-processing"},
+	prerequisites = {"carbon-oxides", "calcium-processing", "chemical-science-pack"},
 	unit =
 	{
 		count = 250,
@@ -1325,7 +1321,7 @@ data:extend(
 			recipe = "sulfate-cracking"
 		}
 	},
-	prerequisites = {"slag-use", "carbon-processing", "sulfur-processing"},
+	prerequisites = {"slag-use", "carbon-processing", "sulfur-processing", "production-science-pack"},
 	unit =
 	{
 		count = 250,

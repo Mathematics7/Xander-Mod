@@ -4,7 +4,7 @@ local xmutil = require("xmutil")
 slow_belt_animation_set = {
 	animation_set =
 	{
-	  filename = "__xander-mod-v1__/graphics/entity/logistic/slow-transport-belt/belt.png",
+	  filename = "__xander-v1-graphics__/graphics/entity/logistic/slow-transport-belt/belt.png",
 	  priority = "extra-high",
 	  width = 64,
 	  height = 64,
@@ -12,7 +12,7 @@ slow_belt_animation_set = {
 	  direction_count = 20,
 	  hr_version =
 	  {
-	    filename = "__xander-mod-v1__/graphics/entity/logistic/slow-transport-belt/hr-belt.png",
+	    filename = "__xander-v1-graphics__/graphics/entity/logistic/slow-transport-belt/hr-belt.png",
 	    priority = "extra-high",
 	    width = 128,
 	    height = 128,
@@ -56,7 +56,7 @@ slow_belt_animation_set = {
 expedited_belt_animation_set = {
 	animation_set =
 	{
-	  filename = "__xander-mod-v1__/graphics/entity/logistic/expedited-transport-belt/belt.png",
+	  filename = "__xander-v1-graphics__/graphics/entity/logistic/expedited-transport-belt/belt.png",
 	  priority = "extra-high",
 	  width = 64,
 	  height = 64,
@@ -64,7 +64,7 @@ expedited_belt_animation_set = {
 	  direction_count = 20,
 	  hr_version =
 	  {
-	    filename = "__xander-mod-v1__/graphics/entity/logistic/expedited-transport-belt/hr-belt.png",
+	    filename = "__xander-v1-graphics__/graphics/entity/logistic/expedited-transport-belt/hr-belt.png",
 	    priority = "extra-high",
 	    width = 128,
 	    height = 128,
@@ -142,15 +142,20 @@ data.raw.splitter["fast-splitter"].next_upgrade = "expedited-splitter"
 data.raw.splitter["express-splitter"].max_health = 360
 data.raw.splitter["express-splitter"].speed = 0.15625
 
+
 --Base "loader"
 data.raw.loader["loader"].max_health = 150
+data.raw.loader["loader"].next_upgrade = "fast-loader"
 
 --Base "fast-loader"
 data.raw.loader["fast-loader"].max_health = 200
+data.raw.loader["fast-loader"].next_upgrade = "expedited-loader"
 
 --Base "express-loader"
 data.raw.loader["express-loader"].max_health = 300
 data.raw.loader["express-loader"].speed = 0.15625
+
+
 
 
 data:extend{
@@ -192,7 +197,7 @@ xmutil.clone("underground-belt", "underground-belt",
 	{
 		{
 			"__base__/graphics/entity/underground-belt/(h?r?-?)underground-belt-",
-			"__xander-mod-v1__/graphics/entity/logistic/slow-underground-belt/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/slow-underground-belt/%1",
 		}
 	},
 	{
@@ -213,7 +218,7 @@ xmutil.clone("underground-belt", "fast-underground-belt",
 	{
 		{
 			"__base__/graphics/entity/fast-underground-belt/(h?r?-?)fast-underground-belt-",
-			"__xander-mod-v1__/graphics/entity/logistic/expedited-underground-belt/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/expedited-underground-belt/%1",
 		}
 	},
 	{
@@ -234,7 +239,7 @@ xmutil.clone("splitter", "splitter",
 	{
 		{
 			"__base__/graphics/entity/splitter/(h?r?-?)splitter-",
-			"__xander-mod-v1__/graphics/entity/logistic/slow-splitter/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/slow-splitter/%1",
 		}
 	},
 	{
@@ -255,7 +260,7 @@ xmutil.clone("splitter", "fast-splitter",
 	{
 		{
 			"__base__/graphics/entity/fast-splitter/(h?r?-?)fast-splitter-",
-			"__xander-mod-v1__/graphics/entity/logistic/expedited-splitter/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/expedited-splitter/%1",
 		}
 	},
 	{
@@ -284,6 +289,7 @@ xmutil.clone("loader", "fast-loader",
 		animation_speed_coefficient = 32,
 		belt_animation_set = expedited_belt_animation_set,
 		speed = 0.09375,
+		next_upgrade = "express-loader"
 	}
 ),
 --Base "express-loader" placeholder

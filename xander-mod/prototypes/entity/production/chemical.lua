@@ -26,6 +26,7 @@ data.raw["assembling-machine"]["chemical-plant"].energy_source =
 	}
 }
 data.raw["assembling-machine"]["chemical-plant"].energy_usage = "200kW"
+data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "reactor"
 
 --Base "centrifuge" 
 data.raw["assembling-machine"]["centrifuge"].max_health = 500
@@ -47,11 +48,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-1/1.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-1/1.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-1/hr-1.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-1/hr-1.png",
 		},
 	},
 	{
@@ -70,6 +71,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		energy_usage = "200kW",
 		fast_replaceable_group = "reactor",
 		crafting_categories = {"basic-chemistry", "chemistry"},
+		next_upgrade = "reactor-2"
 	}
 ),
 --Catalytic Reactor
@@ -77,11 +79,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-2/2.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-2/2.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-2/hr-2.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-2/hr-2.png",
 		},
 	},
 	{
@@ -100,6 +102,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		energy_usage = "400kW",
 		ingredient_count = 6,
 		fast_replaceable_group = "reactor",
+		crafting_categories = {"basic-chemistry", "chemistry"},
 	}
 ),
 --Basic Electrolyzer
@@ -107,11 +110,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-1/1.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-1/1.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-1/hr-1.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-1/hr-1.png",
 		},
 	},
 	{
@@ -131,6 +134,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		ingredient_count = 4,
 		crafting_categories = {"electrolysis"},
 		fast_replaceable_group = "electrolyzer",
+		next_upgrade = "electrolyzer-2"
 	}
 ),
 --Advanced Electrolyzer
@@ -138,11 +142,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-2/2.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-2/2.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-2/hr-2.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-2/hr-2.png",
 		},
 	},
 	{
@@ -172,19 +176,19 @@ xmutil.clone("assembling-machine", "oil-refinery",
 	{
 		{
 			"__base__/graphics/entity/oil-refinery/oil-refinery.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/3.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/3.png",
 		},
 		{
 			"__base__/graphics/entity/oil-refinery/hr-oil-refinery.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/hr-3.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/hr-3.png",
 		},
 		{
 			"__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/steam.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/steam.png",
 		},
 		{
 			"__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/hr-steam.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/hr-steam.png",
 		},
 	},
 	{
@@ -211,3 +215,6 @@ xmutil.clone("assembling-machine", "oil-refinery",
 	}
 ),
 }
+
+--Base "chemical-plant"
+data.raw["assembling-machine"]["chemical-plant"].next_upgrade = "reactor-1"

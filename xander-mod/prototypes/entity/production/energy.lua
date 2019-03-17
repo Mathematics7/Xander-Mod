@@ -5,7 +5,11 @@ local xmutil = require("xmutil")
 
 --Base "boiler"
 data.raw.boiler["boiler"].energy_source.fuel_category = "crude"
+data.raw.boiler["boiler"].energy_source.effectivity = 1/2
 data.raw.boiler["boiler"].energy_source.emissions = 0.004
+data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
+data.raw.boiler["boiler"].energy_consumption = "1.8MW"
+
 
 --Base "heat-exchanger"
 data.raw.boiler["heat-exchanger"].max_health = 500
@@ -17,6 +21,7 @@ data.raw.boiler["heat-exchanger"].max_health = 500
 --Base "steam-turbine"
 data.raw.generator["steam-turbine"].max_health = 400
 data.raw.generator["steam-turbine"].maximum_temperature = 300
+data.raw.generator["steam-turbine"].fast_replaceable_group = "steam-turbine"
 
 --Base "nuclear-reactor"
 data.raw.reactor["nuclear-reactor"].max_health = 1000
@@ -28,6 +33,7 @@ data.raw["solar-panel"]["solar-panel"].production = "45kW"
 
 --Base "accumulator"
 data.raw.accumulator["accumulator"].max_health = 100
+data.raw.accumulator["accumulator"].fast_replaceable_group = "accumulator"
 data.raw.accumulator["accumulator"].energy_source =
 {
 	type = "electric",
@@ -38,7 +44,7 @@ data.raw.accumulator["accumulator"].energy_source =
 }
 
 --Base "small-lamp"
-
+data.raw.lamp["small-lamp"].fast_replaceable_group = "lamp"
 
 data:extend{
 
@@ -48,47 +54,47 @@ xmutil.clone("boiler", "boiler",
 	{
 		--[[{
 			"__base__/graphics/entity/boiler/boiler-",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/",
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/",
 		},]]--
 		{
 			"__base__/graphics/entity/boiler/boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/E-patch"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-E-patch"
 		}
 	},
 	{
@@ -96,6 +102,7 @@ xmutil.clone("boiler", "boiler",
 		icon = "__xander-mod-v1__/graphics/item/production/energy/boiler-2.png",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-2"},
 		max_health = 500,
+		fast_replaceable_group = "boiler",
 		target_temperature = 300,
 		energy_consumption = "3MW",
 		energy_source = {
@@ -110,43 +117,43 @@ xmutil.clone("boiler", "boiler",
 	{
 		{
 			"__base__/graphics/entity/boiler/boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/E-patch"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-E-patch"
 		}
 	},
 	{
@@ -169,8 +176,12 @@ xmutil.clone("boiler", "boiler",
 xmutil.clone("generator", "steam-turbine",
 	{
 		{
-			"__base__/graphics/entity/steam-turbine/steam-turbine-",
-			"__xander-mod-v1__/graphics/entity/production/steam-turbine-2/",
+			"__base__/graphics/entity/steam-turbine/(h?r?-?)steam-turbine-V.png",
+			"__xander-v1-graphics__/graphics/entity/production/steam-turbine-2/%1V.png",
+		},
+		{
+			"__base__/graphics/entity/steam-turbine/(h?r?-?)steam-turbine-H.png",
+			"__xander-v1-graphics__/graphics/entity/production/steam-turbine-2/%1H.png",
 		},
 	},
 	{
@@ -202,13 +213,15 @@ xmutil.clone("generator", "steam-turbine",
 	},
 	picture =
 	{
-		filename = "__xander-mod-v1__/graphics/entity/production/solar-panel-2/2.png",
+		filename = "__xander-v1-graphics__/graphics/entity/production/solar-panel-2/2.png",
 		priority = "high",
 		width = 139,
 		height = 128
 	},
+	fast_replaceable_group = "xander_solar",
 	vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-	production = "160kW"
+	production = "160kW",
+	next_upgrade = "solar-panel-3"
 },
 --High-Efficiency Solar Panel
 {
@@ -229,11 +242,12 @@ xmutil.clone("generator", "steam-turbine",
 	},
 	picture =
 	{
-		filename = "__xander-mod-v1__/graphics/entity/production/solar-panel-3/3.png",
+		filename = "__xander-v1-graphics__/graphics/entity/production/solar-panel-3/3.png",
 		priority = "high",
 		width = 139,
 		height = 128
 	},
+	fast_replaceable_group = "xander_solar",
 	vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
 	production = "240kW"
 },
@@ -247,13 +261,14 @@ xmutil.clone("accumulator", "accumulator",
 		},
 		{
 			"__base__/graphics/entity/accumulator/(h?r?-?)accumulator.png",
-			"__xander-mod-v1__/graphics/entity/production/accumulator-2/%1accumulator-2.png",
+			"__xander-v1-graphics__/graphics/entity/production/accumulator-2/%1accumulator-2.png",
 		},
 	},
 	{
 		name = "accumulator-2",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "accumulator-2"},
 		max_health = 200,
+		fast_replaceable_group = "accumulator",
 		energy_source =
 		{
 			type = "electric",
@@ -274,7 +289,7 @@ xmutil.clone("lamp", "small-lamp",
 		},
 		{
 			"__base__/graphics/entity/small-lamp/(h?r?-?)lamp.png",
-			"__xander-mod-v1__/graphics/entity/production/lamp-2/%1lamp.png",
+			"__xander-v1-graphics__/graphics/entity/production/lamp-2/%1lamp.png",
 		},
 	},
 	{
@@ -282,8 +297,20 @@ xmutil.clone("lamp", "small-lamp",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "lamp-2"},
 		max_health = 200,
 		energy_usage_per_tick = "10KW",
-		light = {intensity = 1.5, size = 60},
-
+		light = {intensity = 1.5, size = 60}
 	}
 ),
 }
+
+
+--Base "boiler"
+data.raw.boiler["boiler"].next_upgrade = "boiler-2"
+
+--Base "steam-turbine"
+data.raw.generator["steam-turbine"].next_upgrade = "steam-turbine-2"
+
+--Base "accumulator"
+data.raw.accumulator["accumulator"].next_upgrade = "accumulator-2"
+
+--Base "small-lamp"
+data.raw.lamp["small-lamp"].next_upgrade = "lamp-2"

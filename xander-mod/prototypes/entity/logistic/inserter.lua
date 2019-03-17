@@ -7,15 +7,18 @@ data.raw.inserter["burner-inserter"].max_health = 50
 data.raw.inserter["burner-inserter"].energy_per_movement = "50KJ"
 data.raw.inserter["burner-inserter"].energy_per_rotation = "50KJ"
 data.raw.inserter["burner-inserter"].energy_source.fuel_category = "crude"
+data.raw.inserter["burner-inserter"].next_upgrade = "inserter-slow"
 
 --Base "inserter"
 
 --Base "long-handed-inserter"
 data.raw.inserter["long-handed-inserter"].max_health = 150
+data.raw.inserter["long-handed-inserter"].next_upgrade = "inserter-long-fast"
 
 --Base "fast-inserter"
 
 --Base "filter-inserter"
+data.raw.inserter["filter-inserter"].next_upgrade = "stack-filter-inserter"
 
 --Base "stack-inserter"
 data.raw.inserter["stack-inserter"].max_health = 200
@@ -32,8 +35,8 @@ data:extend(
 xmutil.clone("inserter", "burner-inserter",
 	{
 		{
-			"__base__/graphics/entity/burner-inserter/burner-inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-chemical-burner/",
+			"__base__/graphics/entity/burner-inserter/(h?r?-?)burner-inserter-",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-chemical-burner/%1",
 		},
 	},
 	{
@@ -47,8 +50,8 @@ xmutil.clone("inserter", "burner-inserter",
 xmutil.clone("inserter", "inserter",
 	{
 		{
-			"__base__/graphics/entity/inserter/inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-slow/",
+			"__base__/graphics/entity/inserter/(h?r?-?)inserter-",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-slow/%1",
 		},
 	},
 	{
@@ -70,8 +73,8 @@ xmutil.clone("inserter", "inserter",
 xmutil.clone("inserter", "fast-inserter",
 	{
 		{
-			"__base__/graphics/entity/fast-inserter/fast-inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-long-fast/",
+			"__base__/graphics/entity/fast-inserter/(h?r?-?)fast-inserter-",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-long-fast/%1",
 		},
 	},
 	{
@@ -85,6 +88,7 @@ xmutil.clone("inserter", "fast-inserter",
 		energy_source = { drain = "1kW" },
 		extension_speed = 0.07,
 		rotation_speed = 0.0457,
+		next_upgrade = "inserter-long-stack",
 	}
 ),
 --Base "filter-inserter" placeholder
@@ -93,8 +97,8 @@ xmutil.clone("inserter", "fast-inserter",
 xmutil.clone("inserter", "stack-inserter",
 	{
 		{
-			"__base__/graphics/entity/stack-inserter/stack-inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-long-stack/",
+			"__base__/graphics/entity/stack-inserter/(h?r?-?)stack-inserter-",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-long-stack/%1",
 		},
 	},
 	{
@@ -115,3 +119,13 @@ xmutil.clone("inserter", "stack-inserter",
 
 }
 )
+
+
+-- XM "inserter-slow"
+data.raw.inserter["inserter-slow"].next_upgrade = "inserter"
+
+-- XM "inserter-long-fast"
+data.raw.inserter["inserter-long-fast"].fast_replaceable_group = "long-handed-inserter"
+
+-- XM "inserter-long-stack"
+data.raw.inserter["inserter-long-stack"].fast_replaceable_group = "long-handed-inserter"
