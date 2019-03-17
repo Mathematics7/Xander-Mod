@@ -95,7 +95,7 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "apatite",
 		order = "b",
 		base_density = 8,
@@ -145,7 +145,7 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "bauxite",
 		order = "b",
 		base_density = 8,
@@ -153,7 +153,7 @@ data:extend(
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
-    },
+	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -192,7 +192,7 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/garnierite.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "hard-solid",
+	category = "hard-solid",
 	order = "a-b-b",
 	minable =
 	{
@@ -203,14 +203,14 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "garnierite",
 		order = "b",
 		base_density = 7,
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1;
-    },
+	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -236,6 +236,7 @@ data:extend(
 	},
 	map_color = {r = 0.28, g = 0.7, b = 0.37}
 },
+
 --Granitic Ore
 {
 	type = "resource",
@@ -253,7 +254,7 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "granitic-ore",
 		order = "b",
 		base_density = 7,
@@ -261,7 +262,7 @@ data:extend(
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
-    },
+	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -305,14 +306,14 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "heavy-sand",
 		order = "b",
 		base_density = 8,
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.0;
-    },
+	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -357,7 +358,7 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "lead-ore",
 		order = "b",
 		base_density = 8,
@@ -365,7 +366,7 @@ data:extend(
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
-    },
+	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -422,7 +423,7 @@ data:extend(
 	},
 	collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "mineral-water",
 		order = "c",
 		base_density = 8.2,
@@ -435,7 +436,7 @@ data:extend(
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1,
 		starting_rq_factor_multiplier = 1.2;
-    },
+	},
 	stage_counts = {0},
 	stages =
 	{
@@ -449,6 +450,8 @@ data:extend(
 			variation_count = 1
 		}
 	},
+	tree_removal_max_distance = 1024,
+	tree_removal_probability = 0.7,
 	map_color = {r = 0, g = 0.75, b = 0.55},
 	map_grid = false
 },
@@ -483,7 +486,7 @@ data:extend(
 	},
 	collision_box = {{ -1.4, -1.4}, {1.4, 1.4}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "natural-gas",
 		order = "c",
 		base_density = 8.2,
@@ -495,7 +498,7 @@ data:extend(
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1;
-    },
+	},
 	stage_counts = {0},
 	stages =
 	{
@@ -509,6 +512,8 @@ data:extend(
 			variation_count = 1
 		}
 	},
+	tree_removal_max_distance = 1024,
+	tree_removal_probability = 0.7,
 	map_color = {r = 1, g = 1, b = 0},
 	map_grid = false
 },
@@ -534,14 +539,14 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace = resource_autoplace.resource_autoplace_settings{
+	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "sulfidic-ore",
 		order = "b",
 		base_density = 8,
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.2;
-    },
+	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
