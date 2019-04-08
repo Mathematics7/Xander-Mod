@@ -2,8 +2,8 @@
 --Base Overrides
 
 --Base "advanced-material-processing"
-data.raw.technology["advanced-material-processing"].effects = {{type = "unlock-recipe", recipe = "brick-clay-graphite-a"}, 
-	{type = "unlock-recipe", recipe = "steel-furnace"}, {type = "unlock-recipe", recipe = "iron-plate-b"}, 
+data.raw.technology["advanced-material-processing"].effects = {{type = "unlock-recipe", recipe = "brick-clay-graphite-a"},
+	{type = "unlock-recipe", recipe = "steel-furnace"}, {type = "unlock-recipe", recipe = "iron-plate-b"},
 	{type = "unlock-recipe", recipe = "forging-iron-b"}, {type = "unlock-recipe", recipe = "copper-plate-b"}}
 data.raw.technology["advanced-material-processing"].prerequisites = {"plumbing-steel", "logistic-science-pack"}
 data.raw.technology["advanced-material-processing"].unit = {count = 20, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}}, time = 30}
@@ -12,7 +12,7 @@ data.raw.technology["advanced-material-processing"].order = "07-08"
 --Base "advanced-material-processing-2"
 data.raw.technology["advanced-material-processing-2"].icon = "__xander-mod-v1__/graphics/technology/production/furnace_5.png"
 data.raw.technology["advanced-material-processing-2"].icon_size = 128
-data.raw.technology["advanced-material-processing-2"].effects = {{type = "unlock-recipe", recipe = "electric-furnace"}, 
+data.raw.technology["advanced-material-processing-2"].effects = {{type = "unlock-recipe", recipe = "electric-furnace"},
 	{type = "unlock-recipe", recipe = "brick-clay-graphite-b"}, {type = "unlock-recipe", recipe = "fiber-glass"}}
 data.raw.technology["advanced-material-processing-2"].prerequisites = {"advanced-material-processing", "electronics"}
 data.raw.technology["advanced-material-processing-2"].unit = {count = 400, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}}, time = 45}
@@ -38,18 +38,18 @@ data.raw.technology["automation-2"].order = "07-23"
 data.raw.technology["automation-3"].icon = "__xander-mod-v1__/graphics/technology/production/automation-3.png"
 data.raw.technology["automation-3"].icon_size = 128
 data.raw.technology["automation-3"].prerequisites = {"automation-2", "machines_2", "inserter-filter", "production-science-pack"}
-data.raw.technology["automation-3"].unit = {count = 200, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}, 
+data.raw.technology["automation-3"].unit = {count = 200, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
 	{"production-science-pack", 1}}, time = 30}
 data.raw.technology["automation-3"].order = "07-24"
 
 --Base "effect-transmission"
 data.raw.technology["effect-transmission"].prerequisites = {"modules", "machines_3", "radar_1"}
-data.raw.technology["effect-transmission"].unit = {count = 300, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}, 
+data.raw.technology["effect-transmission"].unit = {count = 300, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1},
 	{"production-science-pack", 1}, {"utility-science-pack", 1}}, time = 45}
 data.raw.technology["effect-transmission"].order = "07-27"
 
 --Base "nuclear-power"
-data.raw.technology["nuclear-power"].effects = {{type = "unlock-recipe", recipe = "nuclear-reactor"}, {type = "unlock-recipe", recipe = "fuel-pellet"}, 
+data.raw.technology["nuclear-power"].effects = {{type = "unlock-recipe", recipe = "nuclear-reactor"}, {type = "unlock-recipe", recipe = "fuel-pellet"},
 	{type = "unlock-recipe", recipe = "uranium-fuel-cell"}}
 data.raw.technology["nuclear-power"].prerequisites = {"boiler_3", "forging-zirconium", "fuel-enrichment"}
 data.raw.technology["nuclear-power"].order = "07-32"
@@ -62,7 +62,7 @@ data.raw.technology["solar-energy"].prerequisites = {"advanced-electronics", "fo
 data.raw.technology["solar-energy"].order = "07-33"
 
 --Base "electric-energy-accumulators-1"
-data.raw.technology["electric-energy-accumulators-1"].order = "07-36"
+data.raw.technology["electric-energy-accumulators"].order = "07-36"
 
 --Base "modules"
 data.raw.technology["modules"].order = "07-43"
@@ -1122,7 +1122,7 @@ data:extend(
 			recipe = "accumulator-2"
 		}
 	},
-	prerequisites = {"electric-energy-accumulators-1", "forging-stainless", "battery_2", "insulator_2", "production-science-pack"},
+	prerequisites = {"electric-energy-accumulators", "forging-stainless", "battery_2", "insulator_2", "production-science-pack"},
 	unit =
 	{
 		count = 400,
