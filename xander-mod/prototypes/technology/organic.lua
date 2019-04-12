@@ -125,7 +125,7 @@ data:extend(
 			recipe = "formic-acid"
 		}
 	},
-	prerequisites = {"reactor_0", "machine-tool_0"},
+	prerequisites = {"reactor_0", "machine-tool_0", "automation-science-pack"},
 	unit =
 	{
 		count = 50,
@@ -184,7 +184,7 @@ data:extend(
 			recipe = "dimethyl-carbonate"
 		}
 	},
-	prerequisites = {"organics_2", "fluorine-processing"},
+	prerequisites = {"organics_2", "fluorine-processing", "production-science-pack"},
 	unit =
 	{
 		count = 800,
@@ -253,7 +253,7 @@ data:extend(
 			recipe = "rubber-b"
 		}
 	},
-	prerequisites = {"rubber-a", "heavy-reforming", "zinc-refining"},
+	prerequisites = {"rubber-a", "heavy-reforming", "zinc-refining", "chemical-science-pack"},
 	unit =
 	{
 		count = 350,
@@ -282,7 +282,7 @@ data:extend(
 			recipe = "nitrocellulose"
 		}
 	},
-	prerequisites = {"organics_1", "nitric-acid-a"},
+	prerequisites = {"organics_1", "nitric-acid-a", "logistic-science-pack"},
 	unit =
 	{
 		count = 100,
@@ -402,7 +402,7 @@ data:extend(
 			recipe = "lubricant-b"
 		}
 	},
-	prerequisites = {"oil-processing", "phenolic-resin", "lithium-precipitation"},
+	prerequisites = {"oil-processing", "phenolic-resin", "lithium-precipitation", "production-science-pack"},
 	unit =
 	{
 		count = 150,
@@ -429,7 +429,7 @@ data:extend(
 			recipe = "uncured-resol"
 		}
 	},
-	prerequisites = {"organics_1", "phenol-a"},
+	prerequisites = {"organics_1", "phenol-a", "logistic-science-pack"},
 	unit =
 	{
 		count = 200,
@@ -459,7 +459,7 @@ data:extend(
 			recipe = "naptha-benzene"
 		}
 	},
-	prerequisites = {"heavy-cracking", "light-reforming"},
+	prerequisites = {"heavy-cracking", "light-reforming", "chemical-science-pack"},
 	unit =
 	{
 		count = 300,
@@ -614,7 +614,7 @@ data:extend(
 			recipe = "methane-gasification"
 		}
 	},
-	prerequisites = {"carbon-oxides", "light-cracking"},
+	prerequisites = {"carbon-oxides", "light-cracking", "production-science-pack"},
 	unit =
 	{
 		count = 400,
@@ -678,7 +678,7 @@ data:extend(
 			recipe = "uncured-epoxy"
 		}
 	},
-	prerequisites = {"phenolic-resin", "hydrocarbon-chlorination", "haber-process"},
+	prerequisites = {"phenolic-resin", "hydrocarbon-chlorination", "haber-process", "production-science-pack"},
 	unit =
 	{
 		count = 400,

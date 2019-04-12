@@ -4,7 +4,6 @@ script.on_event(defines.events.on_player_created, function(event)
 	--player.print({event.name})
 	player.insert{name = "iron-plate", count = 2}
 	player.insert{name = "copper-cable", count = 100}
-	player.insert{name = "forging-titanium", count = 10}
 	player.insert{name = "mechanism-0", count = 20}
 	player.insert{name = "electric-engine-unit", count = 10}
 	player.insert{name = "burner-mining-drill", count = 1}

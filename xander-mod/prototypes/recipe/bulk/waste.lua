@@ -69,6 +69,19 @@ data:extend(
 	results = {{"iron-plate", 12}},
 	subgroup = "raw-material"
 },
+--Slow inserter
+{
+	type = "recipe",
+	name = "recycle-slow-inserter",
+	icon = "__xander-mod-v1__/graphics/recipe/waste/recycle-slow-inserter.png",
+	icon_size = 32,
+	category = "smelting",
+	energy_required = 24,
+	enabled = false,
+	ingredients = {{"inserter-slow", 2}, {"limestone", 3}},
+	results = {{"iron-plate", 20}},
+	subgroup = "raw-material"
+},
 
 --
 --WASTE SUBSTANCE TREATMENT

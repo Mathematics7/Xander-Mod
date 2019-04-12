@@ -1,0 +1,15 @@
+Version 2.0.2:
+14.03.2019
+- fix basic steam turbine effectivity
+- fix axe mining speed
+- fix rocket-silo research
+- fix rocket-control-unit research
+- fix satellite research
+- fix low-density-structure researrch
+
+Version 2.0.1:
+- fix steel-furnace dublication
+
+Version 2.0.0:
+09.03.2019
+- Release for 0.17

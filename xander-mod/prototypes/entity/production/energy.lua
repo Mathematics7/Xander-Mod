@@ -5,8 +5,10 @@ local xmutil = require("xmutil")
 
 --Base "boiler"
 data.raw.boiler["boiler"].energy_source.fuel_category = "crude"
-data.raw.boiler["boiler"].energy_source.emissions = 0.004
+data.raw.boiler["boiler"].energy_source.effectivity = 1/2
+data.raw.boiler["boiler"].energy_source.emissions_per_second_per_watt = 0.004
 data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
+data.raw.boiler["boiler"].energy_consumption = "1.8MW"
 
 
 --Base "heat-exchanger"
@@ -52,47 +54,47 @@ xmutil.clone("boiler", "boiler",
 	{
 		--[[{
 			"__base__/graphics/entity/boiler/boiler-",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/",
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/",
 		},]]--
 		{
 			"__base__/graphics/entity/boiler/boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/E-patch"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-2/hr-E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-2/hr-E-patch"
 		}
 	},
 	{
@@ -105,7 +107,7 @@ xmutil.clone("boiler", "boiler",
 		energy_consumption = "3MW",
 		energy_source = {
 			effectivity = 2/3,
-			emissions = 0.02,
+			emissions_per_second_per_watt = 0.02,
 		},
 	}
 ),
@@ -115,43 +117,43 @@ xmutil.clone("boiler", "boiler",
 	{
 		{
 			"__base__/graphics/entity/boiler/boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-N-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-N-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-N-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-E-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-E-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-S-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-S-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-S-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-W-idle",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-W-idle"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-W-idle"
 		},
 		{
 			"__base__/graphics/entity/boiler/boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/E-patch"
 		},
 		{
 			"__base__/graphics/entity/boiler/hr-boiler-E-patch",
-			"__xander-mod-v1__/graphics/entity/production/boiler-4/hr-E-patch"
+			"__xander-v1-graphics__/graphics/entity/production/boiler-4/hr-E-patch"
 		}
 	},
 	{
@@ -175,11 +177,11 @@ xmutil.clone("generator", "steam-turbine",
 	{
 		{
 			"__base__/graphics/entity/steam-turbine/(h?r?-?)steam-turbine-V.png",
-			"__xander-mod-v1__/graphics/entity/production/steam-turbine-2/%1V.png",
+			"__xander-v1-graphics__/graphics/entity/production/steam-turbine-2/%1V.png",
 		},
 		{
 			"__base__/graphics/entity/steam-turbine/(h?r?-?)steam-turbine-H.png",
-			"__xander-mod-v1__/graphics/entity/production/steam-turbine-2/%1H.png",
+			"__xander-v1-graphics__/graphics/entity/production/steam-turbine-2/%1H.png",
 		},
 	},
 	{
@@ -211,7 +213,7 @@ xmutil.clone("generator", "steam-turbine",
 	},
 	picture =
 	{
-		filename = "__xander-mod-v1__/graphics/entity/production/solar-panel-2/2.png",
+		filename = "__xander-v1-graphics__/graphics/entity/production/solar-panel-2/2.png",
 		priority = "high",
 		width = 139,
 		height = 128
@@ -240,7 +242,7 @@ xmutil.clone("generator", "steam-turbine",
 	},
 	picture =
 	{
-		filename = "__xander-mod-v1__/graphics/entity/production/solar-panel-3/3.png",
+		filename = "__xander-v1-graphics__/graphics/entity/production/solar-panel-3/3.png",
 		priority = "high",
 		width = 139,
 		height = 128
@@ -259,7 +261,7 @@ xmutil.clone("accumulator", "accumulator",
 		},
 		{
 			"__base__/graphics/entity/accumulator/(h?r?-?)accumulator.png",
-			"__xander-mod-v1__/graphics/entity/production/accumulator-2/%1accumulator-2.png",
+			"__xander-v1-graphics__/graphics/entity/production/accumulator-2/%1accumulator-2.png",
 		},
 	},
 	{
@@ -287,7 +289,7 @@ xmutil.clone("lamp", "small-lamp",
 		},
 		{
 			"__base__/graphics/entity/small-lamp/(h?r?-?)lamp.png",
-			"__xander-mod-v1__/graphics/entity/production/lamp-2/%1lamp.png",
+			"__xander-v1-graphics__/graphics/entity/production/lamp-2/%1lamp.png",
 		},
 	},
 	{

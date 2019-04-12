@@ -36,7 +36,7 @@ xmutil.clone("inserter", "burner-inserter",
 	{
 		{
 			"__base__/graphics/entity/burner-inserter/(h?r?-?)burner-inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-chemical-burner/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-chemical-burner/%1",
 		},
 	},
 	{
@@ -51,7 +51,7 @@ xmutil.clone("inserter", "inserter",
 	{
 		{
 			"__base__/graphics/entity/inserter/(h?r?-?)inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-slow/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-slow/%1",
 		},
 	},
 	{
@@ -74,7 +74,7 @@ xmutil.clone("inserter", "fast-inserter",
 	{
 		{
 			"__base__/graphics/entity/fast-inserter/(h?r?-?)fast-inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-long-fast/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-long-fast/%1",
 		},
 	},
 	{
@@ -98,7 +98,7 @@ xmutil.clone("inserter", "stack-inserter",
 	{
 		{
 			"__base__/graphics/entity/stack-inserter/(h?r?-?)stack-inserter-",
-			"__xander-mod-v1__/graphics/entity/logistic/inserter-long-stack/%1",
+			"__xander-v1-graphics__/graphics/entity/logistic/inserter-long-stack/%1",
 		},
 	},
 	{

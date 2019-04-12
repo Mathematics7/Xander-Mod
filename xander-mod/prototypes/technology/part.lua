@@ -1,15 +1,25 @@
 
 --Base Overrides
 
+--Base "rocket-control-unit"
+data.raw.technology["rocket-control-unit"].prerequisites = {"speed-module", "effectivity-module", "laser_3"}
+data.raw.technology["rocket-control-unit"].unit = { count = 1000, ingredients = { {"automation-science-pack", 1}, {"logistic-science-pack", 1}, 
+  {"chemical-science-pack", 1}, {"production-science-pack", 1}, {"utility-science-pack", 1}}, time = 45}
+
+--Base "low-density-structure"
+data.raw.technology["low-density-structure"].prerequisites = {"machines_3", "epoxy-resin", "fiber-carbon", "forging-aluminum"}
+data.raw.technology["low-density-structure"].unit = { count = 1000, ingredients = { {"automation-science-pack", 1},
+	{"logistic-science-pack", 1}, {"chemical-science-pack", 1}, {"production-science-pack", 1}}, time = 45}
+
 --Base "engine"
 data.raw.technology["engine"].effects = {{type = "unlock-recipe", recipe = "engine-unit"}}
-data.raw.technology["engine"].prerequisites = {"parts_1", "plumbing-steel", "rubber-a"}
+data.raw.technology["engine"].prerequisites = {"parts_1", "plumbing-steel", "rubber-a", "logistic-science-pack"}
 data.raw.technology["engine"].order = "04-03"
 --Base "robotics"
 data.raw.technology["robotics"].prerequisites = {"parts_2", "battery_2", "forging-aluminum"}
 data.raw.technology["robotics"].order = "04-06"
 --Base "electric-engine"
-data.raw.technology["electric-engine"].prerequisites = {"induction_1", "parts_1", "electronics"}
+data.raw.technology["electric-engine"].prerequisites = {"automation-science-pack", "parts_1", "electronics"}
 data.raw.technology["electric-engine"].effects = {{type = "unlock-recipe", recipe = "motor-1-b"}, {type = "unlock-recipe", recipe = "transformer-1"}}
 data.raw.technology["electric-engine"].unit.ingredients = {{"automation-science-pack", 1}}
 data.raw.technology["electric-engine"].order = "04-16"
@@ -30,7 +40,7 @@ data.raw.technology["battery"].prerequisites = {"plastics", "lead-refining", "su
 data.raw.technology["battery"].order = "04-27"
 --Base "steel-axe"
 data.raw.technology["steel-axe"].prerequisites = { "axe_2", "steel-processing", "parts_1" }
-data.raw.technology["steel-axe"].effects = {{ type = "character-mining-speed", modifier = 3 }}
+data.raw.technology["steel-axe"].effects = {{ type = "character-mining-speed", modifier = 1 }}
 data.raw.technology["steel-axe"].icon = "__xander-mod-v1__/graphics/technology/production/axe-3.png"
 
 data:extend(
@@ -69,7 +79,7 @@ data:extend(
 			recipe = "wheel-1"
 		},
 	},
-	prerequisites = {"smelting-graphite"},
+	prerequisites = {"smelting-graphite", "automation-science-pack"},
 	unit =
 	{
 		count = 20,
@@ -182,7 +192,7 @@ data:extend(
 			recipe = "fiber-carbon"
 		}
 	},
-	prerequisites = {"plastics", "advanced-material-processing-2", "carbon-processing"},
+	prerequisites = {"plastics", "advanced-material-processing-2", "carbon-processing", "utility-science-pack"},
 	unit =
 	{
 		count = 400,
@@ -442,10 +452,6 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "electric-engine-unit"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "automation-science-pack"
 		}
 	},
 	prerequisites = {"reactor_0", "smelting-graphite"},
@@ -545,7 +551,7 @@ data:extend(
 			recipe = "transformer-2"
 		}
 	},
-	prerequisites = {"induction_2", "parts_2", "advanced-electronics"},
+	prerequisites = {"induction_2", "parts_2", "chemical-science-pack"},
 	unit =
 	{
 		count = 200,
@@ -634,7 +640,7 @@ data:extend(
 			recipe = "insulator-2-b"
 		}
 	},
-	prerequisites = {"insulator_2", "silicon-nitride"},
+	prerequisites = {"insulator_2", "silicon-nitride", "utility-science-pack"},
 	unit =
 	{
 		count = 450,
@@ -669,7 +675,7 @@ data:extend(
 			recipe = "crystal-corundum"
 		}
 	},
-	prerequisites = {"optics"},
+	prerequisites = {"optics", "production-science-pack"},
 	unit =
 	{
 		count = 450,
@@ -709,7 +715,7 @@ data:extend(
 			recipe = "crystal-yag"
 		}
 	},
-	prerequisites = {"optics_2", "silicon-nitride", "re-refining"},
+	prerequisites = {"optics_2", "silicon-nitride", "re-refining", "utility-science-pack"},
 	unit =
 	{
 		count = 700,
@@ -803,7 +809,7 @@ data:extend(
 			recipe = "battery-2"
 		}
 	},
-	prerequisites = {"battery", "silver-refining", "electrolysis-salt-water", "zinc-refining"},
+	prerequisites = {"battery", "silver-refining", "electrolysis-salt-water", "zinc-refining", "chemical-science-pack"},
 	unit =
 	{
 		count = 300,
@@ -876,63 +882,6 @@ data:extend(
 		time = 45
 	},
 	order = "04-30"
-},
---Rocket Structure Dedicated Research
-{
-	type = "technology",
-	name = "rocket-structure",
-	icon = "__xander-mod-v1__/graphics/technology/part/rocket-structure.png",
-	icon_size = 128,
-	effects =
-	{
-		{
-			type = "unlock-recipe",
-			recipe = "low-density-structure"
-		}
-	},
-	prerequisites = {"machines_3", "epoxy-resin", "fiber-carbon", "forging-aluminum"},
-	unit =
-	{
-		count = 1000,
-		ingredients =
-		{
-			{"automation-science-pack", 1},
-			{"logistic-science-pack", 1},
-			{"chemical-science-pack", 1},
-			{"production-science-pack", 1}
-		},
-		time = 45
-	},
-	order = "04-31"
-},
---Rocket Control Dedicated Research
-{
-	type = "technology",
-	name = "rocket-control",
-	icon = "__xander-mod-v1__/graphics/technology/part/rocket-control.png",
-	icon_size = 128,
-	effects =
-	{
-		{
-			type = "unlock-recipe",
-			recipe = "rocket-control-unit"
-		}
-	},
-	prerequisites = {"speed-module", "effectivity-module", "laser_3"},
-	unit =
-	{
-		count = 1000,
-		ingredients =
-		{
-			{"automation-science-pack", 1},
-			{"logistic-science-pack", 1},
-			{"chemical-science-pack", 1},
-			{"production-science-pack", 1},
-			{"utility-science-pack", 1}
-		},
-		time = 45
-	},
-	order = "04-32"
 },
 --Rocket Engine Dedicated Research
 {
@@ -1021,11 +970,11 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 2,
+      modifier = 1,
       type = "character-mining-speed"
     }
   },
-  prerequisites = { "axe_1" },
+  prerequisites = { "axe_1", "automation-science-pack" },
   unit = {
     count = 10,
     ingredients = {
@@ -1043,7 +992,7 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 3,
+      modifier = 2,
       type = "character-mining-speed"
     }
   },
@@ -1066,7 +1015,7 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 3,
+      modifier = 2,
       type = "character-mining-speed"
     }
   },

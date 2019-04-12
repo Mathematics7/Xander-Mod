@@ -20,12 +20,14 @@ data.raw["electric-turret"]["laser-turret"].energy_source =
 	drain = "30kW",
 	usage_priority = "primary-input"
 }
+data.raw["electric-turret"]["laser-turret"].fast_replaceable_group = "laser-turret"
 
 --Base "radar"
 data.raw.radar["radar"].max_health = 200
 data.raw.radar["radar"].max_distance_of_sector_revealed = 10
 data.raw.radar["radar"].max_distance_of_nearby_sector_revealed = 2
 data.raw.radar["radar"].energy_per_nearby_scan = "200kJ"
+data.raw.radar["radar"].fast_replaceable_group = "radar"
 
 --Base "car"
 --Base "tank"
@@ -81,6 +83,7 @@ xmutil.clone("wall", "stone-wall",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/wall-2.png",
 		minable = {mining_time = 0.5, result = "wall-2"},
 		max_health = 100,
+    next_upgrade = "wall-3"
 	}
 ),
 --Concrete Wall
@@ -128,6 +131,7 @@ xmutil.clone("wall", "stone-wall",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/wall-3.png",
 		minable = {mining_time = 0.5, result = "wall-3"},
 		max_health = 400,
+    next_upgrade = "wall-4"
 	}
 ),
 --Armored Basalt Wall
@@ -175,6 +179,7 @@ xmutil.clone("wall", "stone-wall",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/wall-4.png",
 		minable = {mining_time = 0.5, result = "wall-4"},
 		max_health = 600,
+    next_upgrade = "wall-5"
 	}
 ),
 --Impervious Wall
@@ -263,6 +268,7 @@ xmutil.clone("gate", "gate",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "gate-2"},
 		max_health = 600,
 		opening_speed = 0.08,
+    next_upgrade = "gate-3"
 	}
 ),
 --Impervious Gate
@@ -377,8 +383,8 @@ xmutil.clone("electric-turret", "laser-turret",
     },
     type = "beam"
   },
-
-	call_for_help_radius = 40
+	call_for_help_radius = 40,
+  next_upgrade = "laser-turret-3"
 }
 ),
 --Nd:YAG Laser Turret
@@ -498,6 +504,7 @@ xmutil.clone("radar", "radar",
       }
     }
   },
+  next_upgrade = "radar-3"
 }
 ),
 --LIDAR Scanning Array
@@ -632,3 +639,13 @@ xmutil.clone("car", "tank",
 
 }
 )
+
+
+--Base "stone-wall"
+data.raw.wall["stone-wall"].next_upgrade = "wall-2"
+--Base "gate"
+data.raw.gate["gate"].next_upgrade = "gate-2"
+--Base "laser-turret"
+data.raw["electric-turret"]["laser-turret"].next_upgrade = "laser-turret-2"
+--Base "radar"
+data.raw.radar["radar"].next_upgrade = "radar-2"

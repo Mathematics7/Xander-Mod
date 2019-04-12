@@ -12,7 +12,7 @@ data.raw["assembling-machine"]["chemical-plant"].energy_source =
 	fuel_category = "crude",
 	effectivity = 1,
 	fuel_inventory_size = 1,
-	emissions = 0.01,
+	emissions_per_second_per_watt = 0.01,
 	smoke =
 	{
 		{
@@ -31,12 +31,12 @@ data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "react
 --Base "centrifuge" 
 data.raw["assembling-machine"]["centrifuge"].max_health = 500
 data.raw["assembling-machine"]["centrifuge"].crafting_speed = 0.5
-data.raw["assembling-machine"]["centrifuge"].energy_source.emissions = 0.004
+data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_second_per_watt = 0.004
 data.raw["assembling-machine"]["centrifuge"].energy_usage = "100kW"
 
 --Base "oil-refinery"
 data.raw["assembling-machine"]["oil-refinery"].max_health = 500
-data.raw["assembling-machine"]["oil-refinery"].energy_source.emissions = 0.004
+data.raw["assembling-machine"]["oil-refinery"].energy_source.emissions_per_second_per_watt = 0.004
 data.raw["assembling-machine"]["oil-refinery"].energy_usage = "400kW"
 
 
@@ -48,11 +48,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-1/1.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-1/1.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-1/hr-1.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-1/hr-1.png",
 		},
 	},
 	{
@@ -66,7 +66,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions = 0.002
+			emissions_per_second_per_watt = 0.002
 		},
 		energy_usage = "200kW",
 		fast_replaceable_group = "reactor",
@@ -79,11 +79,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-2/2.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-2/2.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-2/hr-2.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-2/hr-2.png",
 		},
 	},
 	{
@@ -97,7 +97,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions = 0.002
+			emissions_per_second_per_watt = 0.002
 		},
 		energy_usage = "400kW",
 		ingredient_count = 6,
@@ -110,11 +110,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-1/1.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-1/1.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-1/hr-1.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-1/hr-1.png",
 		},
 	},
 	{
@@ -128,7 +128,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions = 0.002
+			emissions_per_second_per_watt = 0.002
 		},
 		energy_usage = "500kW",
 		ingredient_count = 4,
@@ -142,11 +142,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-2/2.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-2/2.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-mod-v1__/graphics/entity/production/electrolyzer-2/hr-2.png",
+			"__xander-v1-graphics__/graphics/entity/production/electrolyzer-2/hr-2.png",
 		},
 	},
 	{
@@ -161,7 +161,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions = 0.0008
+			emissions_per_second_per_watt = 0.0008
 		},
 		energy_usage = "1MW",
 		ingredient_count = 6,
@@ -176,19 +176,19 @@ xmutil.clone("assembling-machine", "oil-refinery",
 	{
 		{
 			"__base__/graphics/entity/oil-refinery/oil-refinery.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/3.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/3.png",
 		},
 		{
 			"__base__/graphics/entity/oil-refinery/hr-oil-refinery.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/hr-3.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/hr-3.png",
 		},
 		{
 			"__base__/graphics/entity/oil-refinery/oil-refinery-fire.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/steam.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/steam.png",
 		},
 		{
 			"__base__/graphics/entity/oil-refinery/hr-oil-refinery-fire.png",
-			"__xander-mod-v1__/graphics/entity/production/reactor-3/hr-steam.png",
+			"__xander-v1-graphics__/graphics/entity/production/reactor-3/hr-steam.png",
 		},
 	},
 	{
@@ -198,7 +198,7 @@ xmutil.clone("assembling-machine", "oil-refinery",
 		max_health = 1000,
 		crafting_categories = {"chemistry", "oil-processing", "chemical-plant"},
 		crafting_speed = 4,
-		energy_source = { emissions = 0.004 },
+		energy_source = { emissions_per_second_per_watt = 0.004 },
 		energy_usage = "1MW",
 		ingredient_count = 8,
 		fluid_boxes = {

@@ -24,7 +24,7 @@ xmutil.clone("electric-pole", "medium-electric-pole",
 	{
 		{
 			"__base__/graphics/entity/medium-electric-pole/(h?r?-?)medium-electric-pole.png",
-			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1medium-2.png",
+			"__xander-v1-graphics__/graphics/entity/logistic/pylon/%1medium-2.png",
 		},
 	},
 	{
@@ -42,7 +42,7 @@ xmutil.clone("electric-pole", "big-electric-pole",
 	{
 		{
 			"__base__/graphics/entity/big-electric-pole/(h?r?-?)big-electric-pole.png",
-			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1big-2.png",
+			"__xander-v1-graphics__/graphics/entity/logistic/pylon/%1big-2.png",
 		},
 	},
 	{
@@ -60,7 +60,7 @@ xmutil.clone("electric-pole", "substation",
 	{
 		{
 			"__base__/graphics/entity/substation/(h?r?-?)substation.png",
-			"__xander-mod-v1__/graphics/entity/logistic/pylon/%1substation-2.png",
+			"__xander-v1-graphics__/graphics/entity/logistic/pylon/%1substation-2.png",
 		},
 	},
 	{

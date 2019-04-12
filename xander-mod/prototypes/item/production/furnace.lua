@@ -90,28 +90,5 @@ data:extend(
 	stack_size = 50
 },
 
---Electric Refining Furnace with 2 pipes
-{
-	type = "item",
-	name = "furnace-4-2p",
-	icon = "__xander-mod-v1__/graphics/item/production/furnace/furnace-4.png",
-	icon_size = 32,
-	subgroup = "smelting-machine",
-	order = "3",
-	place_result = "furnace-4-2p",
-	stack_size = 50
-},
---Arc Furnace with 2 pipes
-{
-	type = "item",
-	name = "furnace-6-2p",
-	icon = "__xander-mod-v1__/graphics/item/production/furnace/furnace-6.png",
-	icon_size = 32,
-	subgroup = "smelting-machine",
-	order = "6",
-	place_result = "furnace-6-2p",
-	stack_size = 50
-},
-
 }
 )
