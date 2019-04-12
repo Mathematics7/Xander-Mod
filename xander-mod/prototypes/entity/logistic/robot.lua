@@ -12,7 +12,9 @@ data.raw["construction-robot"]["construction-robot"].max_energy = "2MJ"
 
 --Base "roboport"
 --Base "wooden-chest"
+data.raw.container["wooden-chest"].next_upgrade = "iron-chest"
 --Base "iron-chest"
+data.raw.container["iron-chest"].next_upgrade = "steel-chest"
 --Base "steel-chest"
 
 

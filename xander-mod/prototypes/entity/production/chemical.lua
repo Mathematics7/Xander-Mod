@@ -26,6 +26,7 @@ data.raw["assembling-machine"]["chemical-plant"].energy_source =
 	}
 }
 data.raw["assembling-machine"]["chemical-plant"].energy_usage = "200kW"
+data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "reactor"
 
 --Base "centrifuge" 
 data.raw["assembling-machine"]["centrifuge"].max_health = 500
@@ -70,6 +71,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		energy_usage = "200kW",
 		fast_replaceable_group = "reactor",
 		crafting_categories = {"basic-chemistry", "chemistry"},
+		next_upgrade = "reactor-2"
 	}
 ),
 --Catalytic Reactor
@@ -100,6 +102,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		energy_usage = "400kW",
 		ingredient_count = 6,
 		fast_replaceable_group = "reactor",
+		crafting_categories = {"basic-chemistry", "chemistry"},
 	}
 ),
 --Basic Electrolyzer
@@ -131,6 +134,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		ingredient_count = 4,
 		crafting_categories = {"electrolysis"},
 		fast_replaceable_group = "electrolyzer",
+		next_upgrade = "electrolyzer-2"
 	}
 ),
 --Advanced Electrolyzer
@@ -211,3 +215,6 @@ xmutil.clone("assembling-machine", "oil-refinery",
 	}
 ),
 }
+
+--Base "chemical-plant"
+data.raw["assembling-machine"]["chemical-plant"].next_upgrade = "reactor-1"

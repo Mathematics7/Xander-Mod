@@ -142,15 +142,20 @@ data.raw.splitter["fast-splitter"].next_upgrade = "expedited-splitter"
 data.raw.splitter["express-splitter"].max_health = 360
 data.raw.splitter["express-splitter"].speed = 0.15625
 
+
 --Base "loader"
 data.raw.loader["loader"].max_health = 150
+data.raw.loader["loader"].next_upgrade = "fast-loader"
 
 --Base "fast-loader"
 data.raw.loader["fast-loader"].max_health = 200
+data.raw.loader["fast-loader"].next_upgrade = "expedited-loader"
 
 --Base "express-loader"
 data.raw.loader["express-loader"].max_health = 300
 data.raw.loader["express-loader"].speed = 0.15625
+
+
 
 
 data:extend{
@@ -284,6 +289,7 @@ xmutil.clone("loader", "fast-loader",
 		animation_speed_coefficient = 32,
 		belt_animation_set = expedited_belt_animation_set,
 		speed = 0.09375,
+		next_upgrade = "express-loader"
 	}
 ),
 --Base "express-loader" placeholder

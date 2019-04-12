@@ -4,14 +4,16 @@ local xmutil = require("xmutil")
 
 --Base "small-electric-pole"
 data.raw["electric-pole"]["small-electric-pole"].max_health = 50
+data.raw["electric-pole"]["small-electric-pole"].next_upgrade = "medium-electric-pole"
 
 --Base "medium-electric-pole"
 
 --Base "big-electric-pole" placeholder
 data.raw["electric-pole"]["big-electric-pole"].max_health = 200
+data.raw["electric-pole"]["big-electric-pole"].fast_replaceable_group = "big-electric-pole"
 
 --Base "substation" placeholder
-
+data.raw["electric-pole"]["substation"].fast_replaceable_group = "substation"
 
 data:extend{
 
@@ -72,3 +74,14 @@ xmutil.clone("electric-pole", "substation",
 ),
 
 }
+
+
+
+--Base "medium-electric-pole"
+data.raw["electric-pole"]["medium-electric-pole"].next_upgrade = "medium-electric-pole-2"
+
+--Base "big-electric-pole" placeholder
+data.raw["electric-pole"]["big-electric-pole"].next_upgrade = "big-electric-pole-2"
+
+--Base "substation" placeholder
+data.raw["electric-pole"]["substation"].next_upgrade = "substation-2"

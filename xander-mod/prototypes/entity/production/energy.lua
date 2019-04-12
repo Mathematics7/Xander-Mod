@@ -6,6 +6,8 @@ local xmutil = require("xmutil")
 --Base "boiler"
 data.raw.boiler["boiler"].energy_source.fuel_category = "crude"
 data.raw.boiler["boiler"].energy_source.emissions = 0.004
+data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
+
 
 --Base "heat-exchanger"
 data.raw.boiler["heat-exchanger"].max_health = 500
@@ -17,6 +19,7 @@ data.raw.boiler["heat-exchanger"].max_health = 500
 --Base "steam-turbine"
 data.raw.generator["steam-turbine"].max_health = 400
 data.raw.generator["steam-turbine"].maximum_temperature = 300
+data.raw.generator["steam-turbine"].fast_replaceable_group = "steam-turbine"
 
 --Base "nuclear-reactor"
 data.raw.reactor["nuclear-reactor"].max_health = 1000
@@ -28,6 +31,7 @@ data.raw["solar-panel"]["solar-panel"].production = "45kW"
 
 --Base "accumulator"
 data.raw.accumulator["accumulator"].max_health = 100
+data.raw.accumulator["accumulator"].fast_replaceable_group = "accumulator"
 data.raw.accumulator["accumulator"].energy_source =
 {
 	type = "electric",
@@ -38,7 +42,7 @@ data.raw.accumulator["accumulator"].energy_source =
 }
 
 --Base "small-lamp"
-
+data.raw.lamp["small-lamp"].fast_replaceable_group = "lamp"
 
 data:extend{
 
@@ -96,6 +100,7 @@ xmutil.clone("boiler", "boiler",
 		icon = "__xander-mod-v1__/graphics/item/production/energy/boiler-2.png",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-2"},
 		max_health = 500,
+		fast_replaceable_group = "boiler",
 		target_temperature = 300,
 		energy_consumption = "3MW",
 		energy_source = {
@@ -211,8 +216,10 @@ xmutil.clone("generator", "steam-turbine",
 		width = 139,
 		height = 128
 	},
+	fast_replaceable_group = "xander_solar",
 	vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-	production = "160kW"
+	production = "160kW",
+	next_upgrade = "solar-panel-3"
 },
 --High-Efficiency Solar Panel
 {
@@ -238,6 +245,7 @@ xmutil.clone("generator", "steam-turbine",
 		width = 139,
 		height = 128
 	},
+	fast_replaceable_group = "xander_solar",
 	vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
 	production = "240kW"
 },
@@ -258,6 +266,7 @@ xmutil.clone("accumulator", "accumulator",
 		name = "accumulator-2",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "accumulator-2"},
 		max_health = 200,
+		fast_replaceable_group = "accumulator",
 		energy_source =
 		{
 			type = "electric",
@@ -286,8 +295,20 @@ xmutil.clone("lamp", "small-lamp",
 		minable = {hardness = 0.2, mining_time = 0.5, result = "lamp-2"},
 		max_health = 200,
 		energy_usage_per_tick = "10KW",
-		light = {intensity = 1.5, size = 60},
-
+		light = {intensity = 1.5, size = 60}
 	}
 ),
 }
+
+
+--Base "boiler"
+data.raw.boiler["boiler"].next_upgrade = "boiler-2"
+
+--Base "steam-turbine"
+data.raw.generator["steam-turbine"].next_upgrade = "steam-turbine-2"
+
+--Base "accumulator"
+data.raw.accumulator["accumulator"].next_upgrade = "accumulator-2"
+
+--Base "small-lamp"
+data.raw.lamp["small-lamp"].next_upgrade = "lamp-2"

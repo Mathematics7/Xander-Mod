@@ -4,6 +4,7 @@ local xmutil = require("xmutil")
 
 --Base "offshore-pump"
 data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 10
+data.raw["offshore-pump"]["offshore-pump"].fast_replaceable_group = "offshore-pump"
 
 --Base "burner-mining-drill"
 data.raw["mining-drill"]["burner-mining-drill"].max_health = 100
@@ -24,7 +25,7 @@ data.raw["mining-drill"]["electric-mining-drill"].module_specification = {module
 
 --Base "pumpjack"
 data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
-
+data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
 
 data:extend(
 {
@@ -43,7 +44,7 @@ xmutil.clone("offshore-pump", "offshore-pump",
 		icon = "__xander-mod-v1__/graphics/item/production/miner/offshore-pump-1.png",
 		minable = {mining_time = 1, result = "offshore-pump-1"},
 		max_health = 200,
-		pumping_speed = 20,
+		pumping_speed = 20
 	}
 ),
 --XM Logging Camp
@@ -131,6 +132,7 @@ xmutil.clone("mining-drill", "electric-mining-drill",
 		energy_source = { emissions = 0.02 },
 		energy_usage = "400kW",
 		mining_power = 4.5,
+		next_upgrade = "mining-drill-4"
 	}
 ),
 --Bucket Wheel Excavator
@@ -167,8 +169,8 @@ xmutil.clone("mining-drill", "pumpjack",
 			"__xander-mod-v1__/graphics/item/production/miner/pumpjack-2.png",
 		},
 		{
-			"__base__/graphics/entity/pumpjack/pumpjack-base.png",
-			"__xander-mod-v1__/graphics/entity/production/pumpjack-2/base.png",
+			"__base__/graphics/entity/pumpjack/(h?r?-?)pumpjack-base.png",
+			"__xander-mod-v1__/graphics/entity/production/pumpjack-2/%1base.png",
 		},
 		{
 			"__base__/graphics/entity/electric-mining-drill/hr-electric-mining-drill-",
@@ -189,7 +191,7 @@ xmutil.clone("mining-drill", "pumpjack",
 			sheets = {
 				{
 					filename = "__xander-mod-v1__/graphics/entity/production/pumpjack-2/base.png",
-					hr_version = xmutil.NIL,
+					hr_version = { filename = "__xander-mod-v1__/graphics/entity/production/pumpjack-2/hr-base.png" },
 				},
 			},
 		},
@@ -198,14 +200,23 @@ xmutil.clone("mining-drill", "pumpjack",
 				layers = {
 					{
 						priority = "extra-high",
-						width = 116,
-						height = 110,
-						line_length = 10,
+						width = 104,
+						height = 102,
+						frame_count = 40,
+						line_length = 8,
 						shift = util.by_pixel(4, -23),
 						filename = "__xander-mod-v1__/graphics/entity/production/pumpjack-2/animation.png",
-						frame_count = 40,
-						animation_speed = 1,
-						hr_version = xmutil.NIL,
+						animation_speed = 1 / 2,
+						hr_version = {
+							filename = "__xander-mod-v1__/graphics/entity/production/pumpjack-2/hr-animation.png",
+							priority = "extra-high",
+							width = 206,
+							height = 202,
+							frame_count = 40,
+							line_length = 8,
+							shift = util.by_pixel(4, -23),
+							animation_speed = 1 / 2,
+						},
 					},
 				},
 			},
@@ -277,6 +288,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		energy_usage = "100kW",
 		ingredient_count = 6,
 		crafting_categories = {"basic-sluice", "sluice"},
+		fast_replaceable_group = "ore-processor",
 	}
 ),
 --Integrated Ore Plant
@@ -320,8 +332,21 @@ xmutil.clone("assembling-machine", "oil-refinery",
 				pipe_connections = {{ type="input", position = {0, 3} }}
 			},
 		},
+		fast_replaceable_group = "ore-processor"
 	}
 ),
 
 }
 )
+
+--XM Logging Camp
+data.raw["assembling-machine"]["logging-camp"].crafting_categories = {"temp-logging"}
+
+--Base "offshore-pump"
+data.raw["offshore-pump"]["offshore-pump"].next_upgrade = "offshore-pump-1"
+
+--Base "pumpjack"
+data.raw["mining-drill"]["pumpjack"].next_upgrade = "pumpjack-2"
+
+--Base "electric-mining-drill"
+data.raw["mining-drill"]["electric-mining-drill"].next_upgrade = "mining-drill-3"

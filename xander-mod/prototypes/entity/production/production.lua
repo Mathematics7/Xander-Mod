@@ -41,6 +41,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 				},
 			},
 		},
+		next_upgrade = "assembling-machine-1"
 	}
 ),
 --Basic Lathe Mill
@@ -154,7 +155,12 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 
 --Assembling Machine 4
 xmutil.clone("assembling-machine", "assembling-machine-3",
-	{},
+	{
+		{
+			"__base__/graphics/entity/assembling-machine-3/(h?r?-?)assembling-machine-3.png",
+			"__xander-mod-v1__/graphics/entity/production/assembling-machine-4/%14.png",
+		},
+	},
 	{
 		name = "assembling-machine-4",
 		icon = "__xander-mod-v1__/graphics/item/production/production/assembling-machine-4.png",
@@ -166,12 +172,6 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 		energy_source = { emissions = 0.002 },
 		energy_usage = "400kW",
 		ingredient_count = 8,
-		layers = {
-			{
-				filename = "__xander-mod-v1__/graphics/entity/production/assembling-machine-4/4.png",
-				hr_version = { filename = "__xander-mod-v1__/graphics/entity/production/assembling-machine-4/hr-4.png" },
-			},
-		},
 	}
 ),
 
@@ -191,21 +191,39 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 	light = {intensity = 0.75, size = 8, color = {r = 1.0, g = 1.0, b = 1.0}},
 	on_animation =
 	{
-		filename = "__xander-mod-v1__/graphics/entity/production/lab-1/1.png",
-		width = 113,
-		height = 91,
+		filename = "__xander-mod-v1__/graphics/entity/production/lab-1/lab-1.png",
+		width = 98,
+		height = 87,
 		frame_count = 33,
 		line_length = 11,
 		animation_speed = 1 / 3,
-		shift = {0.2, 0.15}
+		shift = {0, 0.046875},
+		hr_version = {
+						filename = "__xander-mod-v1__/graphics/entity/production/lab-1/hr-lab-1.png",
+						width = 194,
+						height = 174,
+						frame_count = 33,
+						scale = 0.5,
+						line_length = 11,
+						animation_speed = 1 / 3,
+						shift = {0, 0.046875},
+					},
 	},
 	off_animation =
 	{
-		filename = "__xander-mod-v1__/graphics/entity/production/lab-1/1.png",
-		width = 113,
-		height = 91,
+		filename = "__xander-mod-v1__/graphics/entity/production/lab-1/lab-1.png",
+		width = 98,
+		height = 87,
 		frame_count = 1,
-		shift = {0.2, 0.15}
+		shift = {0, 0.046875},
+		hr_version = {
+						filename = "__xander-mod-v1__/graphics/entity/production/lab-1/hr-lab-1.png",
+						width = 194,
+						height = 174,
+						frame_count = 1,
+						scale = 0.5,
+						shift = {0, 0.046875},
+					},
 	},
 	working_sound =
 	{
@@ -239,7 +257,9 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 		"basic-science-pack",
 		"automation-science-pack",
 		"logistic-science-pack"
-	}
+	},
+	next_upgrade = "lab",
+	fast_replaceable_group = "lab"
 }
 --Base "lab" placeholder
 --Base "beacon" placeholder
@@ -249,6 +269,9 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 )
 
 --Base Overrides
+
+--XM "assembling-machine-0"
+data.raw["assembling-machine"]["assembling-machine-0"].next_upgrade = "assembling-machine-1"
 
 --Base "assembling-machine-1"
 data.raw["assembling-machine"]["assembling-machine-1"].icon = "__xander-mod-v1__/graphics/item/production/production/assembling-machine-1.png"
@@ -293,7 +316,7 @@ data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 6
 
 --Base "assembling-machine-3"
 data.raw["assembling-machine"]["assembling-machine-3"].icon = "__xander-mod-v1__/graphics/item/production/production/assembling-machine-3.png"
-data.raw["assembling-machine"]["assembling-machine-2"].fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3")
+data.raw["assembling-machine"]["assembling-machine-3"].fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3")
 data.raw["assembling-machine"]["assembling-machine-3"].animation = xmutil.merge{
 	data.raw["assembling-machine"]["assembling-machine-3"].animation,
 	{
@@ -309,11 +332,13 @@ data.raw["assembling-machine"]["assembling-machine-3"].crafting_speed = 2
 data.raw["assembling-machine"]["assembling-machine-3"].energy_source.emissions = 0.004
 data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
 data.raw["assembling-machine"]["assembling-machine-3"].module_specification.module_slots = 3
+data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
 
 --Base "lab"
 data.raw.lab["lab"].max_health = 200
 data.raw.lab["lab"].light = {intensity = 1, size = 10, color = {r = 1.0, g = 1.0, b = 1.0}}
 data.raw.lab["lab"].energy_usage = "50kW"
+data.raw.lab["lab"].fast_replaceable_group = "lab"
 
 --Base "beacon"
 data.raw.beacon["beacon"].energy_usage = "500kW"
