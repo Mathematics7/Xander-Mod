@@ -176,11 +176,11 @@ data.raw.technology["personal-roboport-equipment"].prerequisites = {"constructio
 --null
 data.raw.technology["personal-roboport-equipment"].order = "08-51"
 
---Base "personal-roboport-equipment-2"
+--Base "personal-roboport-mk2-equipment"
 --null
-data.raw.technology["personal-roboport-equipment-2"].prerequisites = {"personal-roboport-equipment", "machines_3", "battery_3"}
+data.raw.technology["personal-roboport-mk2-equipment"].prerequisites = {"personal-roboport-equipment", "machines_3", "battery_3"}
 --null
-data.raw.technology["personal-roboport-equipment-2"].order = "08-52"
+data.raw.technology["personal-roboport-mk2-equipment"].order = "08-52"
 
 --Base "solar-panel-equipment"
 --null
@@ -1031,12 +1031,12 @@ data:extend(
 	--order = "08-50"
 --Base "personal-roboport-equipment" placeholder
 	--order = "08-51"
---Base "personal-roboport-equipment-2" placeholder
+--Base "personal-roboport-mk2-equipment" placeholder
 	--order = "08-52"
 --Personal Roboport Mark 3
 {
 	type = "technology",
-	name = "personal-roboport-equipment-3",
+	name = "personal-roboport-mk3-equipment",
 	icon = "__base__/graphics/technology/personal-roboport-equipment.png",
 	icon_size = 128,
 	effects =
@@ -1046,7 +1046,7 @@ data:extend(
 			recipe = "personal-roboport-mk3-equipment"
 		}
 	},
-	prerequisites = {"personal-roboport-equipment-2", "radar_3"},
+	prerequisites = {"personal-roboport-mk2-equipment", "radar_3"},
 	unit =
 	{
 		count = 500,
