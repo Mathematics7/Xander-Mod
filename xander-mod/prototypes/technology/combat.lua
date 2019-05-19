@@ -214,11 +214,11 @@ data.raw.technology["power-armor"].prerequisites = {"modular-armor", "optics", "
 --null
 data.raw.technology["power-armor"].order = "08-60"
 
---Base "power-armor-2"
+--Base "power-armor-mk2"
 --null
-data.raw.technology["power-armor-2"].prerequisites = {"power-armor", "effectivity-module-3", "machines_3", "optics_2"}
+data.raw.technology["power-armor-mk2"].prerequisites = {"power-armor", "effectivity-module-3", "machines_3", "optics_2"}
 --null
-data.raw.technology["power-armor-2"].order = "08-61"
+data.raw.technology["power-armor-mk2"].order = "08-61"
 
 --Base "night-vision-equipment"
 --null
@@ -1155,12 +1155,12 @@ data:extend(
 	--order = "08-59"
 --Base "power-armor" placeholder
 	--order = "08-60"
---Base "power-armor-2" placeholder
+--Base "power-armor-mk2" placeholder
 	--order = "08-61"
 --Power Armor Mark 3
 {
 	type = "technology",
-	name = "power-armor_3",
+	name = "power-armor-mk3",
 	icon = "__xander-mod-v1__/graphics/technology/combat/power-armor_3.png",
 	icon_size = 128,
 	effects =
@@ -1170,7 +1170,7 @@ data:extend(
 			recipe = "power-armor-mk3"
 		}
 	},
-	prerequisites = {"power-armor-2", "speed-module-3", "optics_3", "silicon-nitride"},
+	prerequisites = {"power-armor-mk2", "speed-module-3", "optics_3", "silicon-nitride"},
 	unit =
 	{
 		count = 100,
