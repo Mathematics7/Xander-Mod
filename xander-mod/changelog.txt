@@ -1,15 +1,39 @@
-Version 2.0.2:
-14.03.2019
-- fix basic steam turbine effectivity
-- fix axe mining speed
-- fix rocket-silo research
-- fix rocket-control-unit research
-- fix satellite research
-- fix low-density-structure researrch
-
-Version 2.0.1:
-- fix steel-furnace dublication
-
-Version 2.0.0:
-09.03.2019
-- Release for 0.17
+---------------------------------------------------------------------------------------------------
+Version: 2.0.4
+Date: 2019-05-20
+  Bugfixes:
+    - fix personal-roboport-mk2-equipment error
+    - fix power-armor-mk2 error
+    - fix character error
+  Balancing:
+    - balance resource generation
+---------------------------------------------------------------------------------------------------
+Version: 2.0.3
+Date: 2019-04-14
+  Changes:
+    - delete forging-titanium on_player_created event
+    - experimental resourcegen changes
+    - add recycle slow-inserter
+  Bugfixes:
+    - fix rename accumulators
+    - fix emissions warning
+---------------------------------------------------------------------------------------------------
+Version: 2.0.2
+Date: 2019-03-14
+  Bugfixes:
+    - fix basic steam turbine effectivity
+    - fix axe mining speed
+    - fix rocket-silo research
+    - fix rocket-control-unit research
+    - fix satellite research
+    - fix low-density-structure researrch
+---------------------------------------------------------------------------------------------------
+Version: 2.0.1
+Date: 2019-03-10
+  Bugfixes:
+    - fix steel-furnace dublication
+---------------------------------------------------------------------------------------------------
+Version: 2.0.0
+Date: 2019-03-09
+  Features:
+    - Release for 0.17
