@@ -95,7 +95,7 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/apatite.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "hard-solid",
+	category = "hard-solid",
 	order = "00",
 	minable =
 	{
@@ -155,8 +155,8 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/bauxite.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "basic-solid",
-	order = "01",
+	category = "basic-solid",
+	order = "a-b-b", --"01",
 	minable =
 	{
 		mining_particle = "bauxite-particle",
@@ -165,25 +165,15 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "bauxite",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		starting_area_size = 600 * 0.02,
-		starting_area_amount = 1500,
-		peaks =
-		{
-			{
-				noise_layer = "bauxite",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
-	},
+	autoplace = resource_autoplace.resource_autoplace_settings{
+		name = "bauxite",
+		order = "b",
+		base_density = 8,
+		has_starting_area_placement = true,
+		resource_index = resource_autoplace.get_next_resource_index(),
+		regular_rq_factor_multiplier = 1.1,
+		starting_rq_factor_multiplier = 1.2;
+  },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -210,11 +200,11 @@ data:extend(
 	map_color = {r = 0.8, g = 0.45, b = 0.1}
 },
 --Base "coal" placeholder
-	--order = "02"
+	--order = "02" or "a-b-b"
 --Base "copper-ore" placeholder
-	--order = "03"
+	--order = "03" or "a-b-b"
 --Base "crude-oil" placeholder
-	--order = "04"
+	--order = "04" or "a-b-b"
 --Garnierite
 {
 	type = "resource",
@@ -222,8 +212,8 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/garnierite.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "hard-solid",
-	order = "05",
+	category = "hard-solid",
+	order = "a-b-b",--"05",
 	minable =
 	{
 		mining_time = 3,
@@ -233,23 +223,14 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "garnierite",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		peaks =
-		{
-			{
-				noise_layer = "garnierite",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
-	},
+	autoplace = resource_autoplace.resource_autoplace_settings{
+		name = "garnierite",
+		order = "b",
+		base_density = 7,
+		has_starting_area_placement = false,
+		resource_index = resource_autoplace.get_next_resource_index(),
+		regular_rq_factor_multiplier = 1.1;
+  },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -282,8 +263,8 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/granitic.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "basic-solid",
-	order = "06",
+	category = "basic-solid",
+	order = "a-b-b",--"06",
 	minable =
 	{
 		mining_particle = "granitic-particle",
@@ -292,25 +273,15 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "granitic-ore",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		starting_area_size = 12,
-		starting_area_amount = 1500,
-		peaks =
-		{
-			{
-				noise_layer = "granitic-ore",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
-	},
+	autoplace = resource_autoplace.resource_autoplace_settings{
+		name = "granitic-ore",
+		order = "b",
+		base_density = 7,
+		has_starting_area_placement = true,
+		resource_index = resource_autoplace.get_next_resource_index(),
+		regular_rq_factor_multiplier = 1.1,
+		starting_rq_factor_multiplier = 1.2;
+  },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -343,8 +314,8 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/heavy.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "tough-solid",
-	order = "07",
+	category = "tough-solid",
+	order = "a-b-b", --"07",
 	minable =
 	{
 		mining_time = 5,
@@ -354,23 +325,14 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "heavy-sand",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		peaks =
-		{
-			{
-				noise_layer = "heavy-sand",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
-	},
+	autoplace = resource_autoplace.resource_autoplace_settings{
+		name = "heavy-sand",
+		order = "b",
+		base_density = 8,
+		has_starting_area_placement = false,
+		resource_index = resource_autoplace.get_next_resource_index(),
+		regular_rq_factor_multiplier = 1.0;
+  },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -397,7 +359,7 @@ data:extend(
 	map_color = {r = 0.27, g = 0.21, b = 0.35}
 },
 --Base "iron-ore" placeholder
-	--order = "08"
+	--order = "08" or "a-b-b"
 --Lead Ore
 {
 	type = "resource",
@@ -405,8 +367,8 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/lead.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "basic-solid",
-	order = "09",
+	category = "basic-solid",
+	order = "a-b-b",--"09",
 	minable =
 	{
 		mining_particle = "lead-particle",
@@ -415,25 +377,15 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "lead-ore",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		starting_area_size = 12,
-		starting_area_amount = 1500,
-		peaks =
-		{
-			{
-				noise_layer = "lead-ore",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
-	},
+	autoplace = resource_autoplace.resource_autoplace_settings{
+		name = "lead-ore",
+		order = "b",
+		base_density = 8,
+		has_starting_area_placement = true,
+		resource_index = resource_autoplace.get_next_resource_index(),
+		regular_rq_factor_multiplier = 1.1,
+		starting_rq_factor_multiplier = 1.2;
+  },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
@@ -467,7 +419,7 @@ data:extend(
 	icon_size = 32,
 	flags = {"placeable-neutral"},
 	category = "basic-fluid",
-	order = "10",
+	order = "a-b-a", --"10",
 	infinite = true,
 	highlight = true,
 	minimum = 60000,
@@ -534,7 +486,7 @@ data:extend(
 	icon_size = 32,
 	flags = {"placeable-neutral"},
 	category = "basic-fluid",
-	order = "11",
+	order = "a-b-a", --"11"
 	infinite = true,
 	highlight = true,
 	minimum = 60000,
@@ -592,9 +544,9 @@ data:extend(
 	map_grid = false
 },
 --Base "uranium-ore" placeholder
-	--order = "12"
+	--order = "12" or "a-b-c"
 --Base "stone" placeholder
-	--order = "13"
+	--order = "13" or "a-b-b"
 --Sulfidic Ore
 {
 	type = "resource",
@@ -602,8 +554,8 @@ data:extend(
 	icon = "__xander-mod-v1__/graphics/item/material/resource/sulfidic.png",
 	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "hard-solid",
-	order = "14",
+	category = "hard-solid",
+	order = "a-b-b",
 	minable =
 	{
 		mining_time = 3,
@@ -613,22 +565,13 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "sulfidic-ore",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		peaks =
-		{
-			{
-				noise_layer = "sulfidic-ore",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
+	autoplace = resource_autoplace.resource_autoplace_settings {
+		name = "sulfidic-ore",
+		order = "d",
+		base_density = 8,
+		has_starting_area_placement = false,
+		resource_index = resource_autoplace.get_next_resource_index() + 2,
+		regular_rq_factor_multiplier = 1.2;
 	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
