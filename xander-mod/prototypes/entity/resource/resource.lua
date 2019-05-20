@@ -109,7 +109,7 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings{
 		name = "apatite",
 		order = "b",
-		base_density = 8,
+		base_density = 12,
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.2;
@@ -159,7 +159,7 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings{
 		name = "bauxite",
 		order = "b",
-		base_density = 8,
+		base_density = 12,
 		has_starting_area_placement = true,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
@@ -217,7 +217,7 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings{
 		name = "garnierite",
 		order = "b",
-		base_density = 7,
+		base_density = 10,
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1;
@@ -267,7 +267,7 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings{
 		name = "granitic-ore",
 		order = "b",
-		base_density = 7,
+		base_density = 10,
 		has_starting_area_placement = true,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
@@ -319,7 +319,7 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings{
 		name = "heavy-sand",
 		order = "b",
-		base_density = 8,
+		base_density = 12,
 		has_starting_area_placement = false,
 		resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.0;
@@ -371,9 +371,9 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings{
 		name = "lead-ore",
 		order = "b",
-		base_density = 8,
+		base_density = 12,
 		has_starting_area_placement = true,
-		resource_index = resource_autoplace.get_next_resource_index(),
+		resource_index = resource_autoplace.get_next_resource_index() + 4,
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
   },
@@ -559,9 +559,16 @@ data:extend(
 	autoplace = resource_autoplace.resource_autoplace_settings {
 		name = "sulfidic-ore",
 		order = "d",
-		base_density = 8,
+
+		base_density = 1.5,
+		random_probability = 1,
+		base_spots_per_km2 = 10.5,
+		random_spot_size_minimum = 1.25,
+		random_spot_size_maximum = 3.0,
+		regular_blob_amplitude_multiplier = 7,
+
 		has_starting_area_placement = false,
-		resource_index = resource_autoplace.get_next_resource_index() + 2,
+		resource_index = resource_autoplace.get_next_resource_index() + 1,
 		regular_rq_factor_multiplier = 1.2;
 	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
