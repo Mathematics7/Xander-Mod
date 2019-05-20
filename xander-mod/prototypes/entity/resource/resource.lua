@@ -96,7 +96,7 @@ data:extend(
 	icon_size = 32,
 	flags = {"placeable-neutral"},
 	category = "hard-solid",
-	order = "00",
+	order = "a-b-b",--"00",
 	minable =
 	{
 		mining_time = 3,
@@ -106,23 +106,14 @@ data:extend(
 	},
 	collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
 	selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-	autoplace =
-	{
-		control = "apatite",
-		sharpness = 1,
-		richness_multiplier = 1500,
-		richness_multiplier_distance_bonus = 30,
-		richness_base = 500,
-		coverage = 0.02,
-		peaks =
-		{
-			{
-				noise_layer = "apatite",
-				noise_octaves_difference = -1.5,
-				noise_persistence = 0.3,
-			}
-		}
-	},
+	autoplace = resource_autoplace.resource_autoplace_settings{
+		name = "apatite",
+		order = "b",
+		base_density = 8,
+		has_starting_area_placement = false,
+		resource_index = resource_autoplace.get_next_resource_index(),
+		regular_rq_factor_multiplier = 1.2;
+  },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
 	stages =
 	{
