@@ -111,7 +111,7 @@ data:extend(
 		order = "b",
 		base_density = 12,
 		has_starting_area_placement = false,
-		resource_index = resource_autoplace.get_next_resource_index(),
+		--resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.2;
   },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
@@ -161,7 +161,7 @@ data:extend(
 		order = "b",
 		base_density = 12,
 		has_starting_area_placement = true,
-		resource_index = resource_autoplace.get_next_resource_index(),
+		--resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
   },
@@ -219,7 +219,7 @@ data:extend(
 		order = "b",
 		base_density = 10,
 		has_starting_area_placement = false,
-		resource_index = resource_autoplace.get_next_resource_index(),
+		--resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1;
   },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
@@ -269,7 +269,7 @@ data:extend(
 		order = "b",
 		base_density = 10,
 		has_starting_area_placement = true,
-		resource_index = resource_autoplace.get_next_resource_index(),
+		--resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
   },
@@ -321,7 +321,7 @@ data:extend(
 		order = "b",
 		base_density = 12,
 		has_starting_area_placement = false,
-		resource_index = resource_autoplace.get_next_resource_index(),
+		--resource_index = resource_autoplace.get_next_resource_index(),
 		regular_rq_factor_multiplier = 1.0;
   },
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
@@ -373,7 +373,7 @@ data:extend(
 		order = "b",
 		base_density = 12,
 		has_starting_area_placement = true,
-		resource_index = resource_autoplace.get_next_resource_index() + 4,
+		--resource_index = resource_autoplace.get_next_resource_index() + 4,
 		regular_rq_factor_multiplier = 1.1,
 		starting_rq_factor_multiplier = 1.2;
   },
@@ -568,7 +568,7 @@ data:extend(
 		regular_blob_amplitude_multiplier = 7,
 
 		has_starting_area_placement = false,
-		resource_index = resource_autoplace.get_next_resource_index() + 1,
+		--resource_index = resource_autoplace.get_next_resource_index() + 1,
 		regular_rq_factor_multiplier = 1.2;
 	},
 	stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10},
