@@ -10,7 +10,7 @@ data.raw["offshore-pump"]["offshore-pump"].fast_replaceable_group = "offshore-pu
 data.raw["mining-drill"]["burner-mining-drill"].max_health = 100
 data.raw["mining-drill"]["burner-mining-drill"].mining_speed = 0.4
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = "crude"
-data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_second_per_watt = 0.01
+data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_second_per_watt = 0.00001
 data.raw["mining-drill"]["burner-mining-drill"].energy_usage = "200kW"
 data.raw["mining-drill"]["burner-mining-drill"].mining_power = 2
 
@@ -18,7 +18,7 @@ data.raw["mining-drill"]["burner-mining-drill"].mining_power = 2
 data.raw["mining-drill"]["electric-mining-drill"].max_health = 200
 data.raw["mining-drill"]["electric-mining-drill"].resource_categories = {"basic-solid", "hard-solid"}
 data.raw["mining-drill"]["electric-mining-drill"].mining_speed = 1
-data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_second_per_watt = 0.02
+data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_second_per_watt = 0.00002
 data.raw["mining-drill"]["electric-mining-drill"].energy_usage = "100kW"
 data.raw["mining-drill"]["electric-mining-drill"].mining_power = 2.5
 data.raw["mining-drill"]["electric-mining-drill"].module_specification = {module_slots = 2}
@@ -90,7 +90,7 @@ xmutil.clone("assembling-machine", "assembling-machine-2",
 			fuel_category = "crude",
 			effectivity = 1,
 			fuel_inventory_size = 1,
-			emissions_per_second_per_watt = 0.01,
+			emissions_per_second_per_watt = 0.00001,
 			smoke =
 			{
 				{
@@ -129,7 +129,7 @@ xmutil.clone("mining-drill", "electric-mining-drill",
 		max_health = 400,
 		resource_categories = {"basic-solid", "hard-solid", "tough-solid"},
 		mining_speed = 4,
-		energy_source = { emissions_per_second_per_watt = 0.02 },
+		energy_source = { emissions_per_second_per_watt = 0.00002 },
 		energy_usage = "400kW",
 		mining_power = 4.5,
 		next_upgrade = "mining-drill-4"
@@ -154,7 +154,7 @@ xmutil.clone("mining-drill", "electric-mining-drill",
 		max_health = 1000,
 		resource_categories = {"basic-solid", "hard-solid", "tough-solid"},
 		mining_speed = 20,
-		energy_source = { emissions_per_second_per_watt = 0.02 },
+		energy_source = { emissions_per_second_per_watt = 0.00002 },
 		energy_usage = "1MW",
 		mining_power = 6.5,
 	}
@@ -183,7 +183,7 @@ xmutil.clone("mining-drill", "pumpjack",
 		max_health = 400,
 		resource_categories = {"basic-fluid", "advanced-fluid"},
 		mining_speed = 4,
-		energy_source = { emissions_per_second_per_watt = 0.02 },
+		energy_source = { emissions_per_second_per_watt = 0.00002 },
 		energy_usage = "200kW",
 		mining_power = 2,
 		module_specification = { module_slots = 4 },
@@ -247,7 +247,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 			fuel_categories = {"crude", "chemical"},
 			effectivity = 1,
 			fuel_inventory_size = 1,
-			emissions_per_second_per_watt = 0.01,
+			emissions_per_second_per_watt = 0.00001,
 			smoke =
 			{
 				{
@@ -284,7 +284,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		max_health = 200,
 		module_specification = { module_slots = 2 },
 		crafting_speed = 1,
-		energy_source = { emissions_per_second_per_watt = 0.02 },
+		energy_source = { emissions_per_second_per_watt = 0.00002 },
 		energy_usage = "100kW",
 		ingredient_count = 6,
 		crafting_categories = {"basic-sluice", "sluice"},
@@ -318,7 +318,7 @@ xmutil.clone("assembling-machine", "oil-refinery",
 		max_health = 400,
 		crafting_categories = {"sluice", "ore-plant"},
 		crafting_speed = 2,
-		energy_source = { emissions_per_second_per_watt = 0.01 },
+		energy_source = { emissions_per_second_per_watt = 0.00001 },
 		energy_usage = "400kW",
 		ingredient_count = 6,
 		fluid_boxes = {

@@ -428,7 +428,7 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.pipe_connections =
 --Base "storage-tank"
 --Base "pump"
 data.raw.pump["pump"].max_health = 200
-data.raw.pump["pump"].energy_source.emissions_per_second_per_watt = 0.005
+data.raw.pump["pump"].energy_source.emissions_per_second_per_watt = 0.000005
 data.raw.pump["pump"].energy_usage = "20kW"
 
 --Base "arithmetic-combinator"
@@ -509,7 +509,7 @@ xmutil.clone("pump", "pump",
 		icon = "__xander-mod-v1__/graphics/item/logistic/plumbing/pump-2.png",
 		minable = {mining_time = 1, result = "pump-2"},
 		max_health = 400,
-		energy_source = { emissions_per_second_per_watt = 0.002 },
+		energy_source = { emissions_per_second_per_watt = 0.000002 },
 		energy_usage = "50kW",
 		pumping_speed = 500,
 		animations = {
@@ -542,7 +542,7 @@ xmutil.clone("pump", "pump",
 		icon = "__xander-mod-v1__/graphics/item/logistic/plumbing/pump-3.png",
 		minable = {mining_time = 1, result = "pump-3"},
 		max_health = 400,
-		energy_source = { emissions_per_second_per_watt = 0.002 },
+		energy_source = { emissions_per_second_per_watt = 0.000002 },
 		energy_usage = "50kW",
 		pumping_speed = 500,
 		animations = {
