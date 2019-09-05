@@ -7,7 +7,7 @@ data.raw.recipe["engine-unit"].ingredients = {{"piston-cylinder", 1}, {"mechanis
 
 --Base "flying-robot-frame"
 data.raw.recipe["flying-robot-frame"].energy_required = 10
-data.raw.recipe["flying-robot-frame"].ingredients = {{"battery-2", 1}, {"control-2", 1}, {"forging-aluminum", 1}, {"motor-3", 1}}
+data.raw.recipe["flying-robot-frame"].ingredients = {{"battery-2", 1}, {"control-2", 1}, {"forging-aluminum", 1}, {"motor-2", 1}}
 
 
 data:extend(
