@@ -109,53 +109,62 @@ expedited_belt_animation_set = {
 --Base "transport-belt"
 data.raw["transport-belt"]["transport-belt"].max_health = 120
 data.raw["transport-belt"]["transport-belt"].next_upgrade = "fast-transport-belt"
+data.raw["transport-belt"]["transport-belt"].minable.mining_time = 0.3
 
 --Base "fast-transport-belt"
 data.raw["transport-belt"]["fast-transport-belt"].max_health = 140
 data.raw["transport-belt"]["fast-transport-belt"].next_upgrade = "expedited-transport-belt"
+data.raw["transport-belt"]["fast-transport-belt"].minable.mining_time = 0.3
 
 --Base "express-transport-belt"
 data.raw["transport-belt"]["express-transport-belt"].max_health = 180
 data.raw["transport-belt"]["express-transport-belt"].speed = 0.15625
+data.raw["transport-belt"]["express-transport-belt"].minable.mining_time = 0.3
 
 --Base "underground-belt"
 data.raw["underground-belt"]["underground-belt"].max_health = 120
 data.raw["underground-belt"]["underground-belt"].next_upgrade = "fast-underground-belt"
+data.raw["underground-belt"]["underground-belt"].minable.mining_time = 0.5
 
 --Base "fast-underground-belt"
 data.raw["underground-belt"]["fast-underground-belt"].max_health = 140
 data.raw["underground-belt"]["fast-underground-belt"].next_upgrade = "expedited-underground-belt"
+data.raw["underground-belt"]["fast-underground-belt"].minable.mining_time = 0.5
 
 --Base "express-underground-belt"
 data.raw["underground-belt"]["express-underground-belt"].max_health = 180
 data.raw["underground-belt"]["express-underground-belt"].speed = 0.15625
+data.raw["underground-belt"]["express-underground-belt"].minable.mining_time = 0.5
 
 --Base "splitter"
 data.raw.splitter["splitter"].max_health = 240
 data.raw.splitter["splitter"].next_upgrade = "fast-splitter"
+data.raw.splitter["splitter"].minable.mining_time = 0.5
 
 --Base "fast-splitter"
 data.raw.splitter["fast-splitter"].max_health = 280
 data.raw.splitter["fast-splitter"].next_upgrade = "expedited-splitter"
+data.raw.splitter["fast-splitter"].minable.mining_time = 0.5
 
 --Base "express-splitter"
 data.raw.splitter["express-splitter"].max_health = 360
 data.raw.splitter["express-splitter"].speed = 0.15625
-
+data.raw.splitter["express-splitter"].minable.mining_time = 0.5
 
 --Base "loader"
 data.raw.loader["loader"].max_health = 150
 data.raw.loader["loader"].next_upgrade = "fast-loader"
+data.raw.loader["loader"].minable.mining_time = 0.5
 
 --Base "fast-loader"
 data.raw.loader["fast-loader"].max_health = 200
 data.raw.loader["fast-loader"].next_upgrade = "expedited-loader"
+data.raw.loader["fast-loader"].minable.mining_time = 0.5
 
 --Base "express-loader"
 data.raw.loader["express-loader"].max_health = 300
 data.raw.loader["express-loader"].speed = 0.15625
-
-
+data.raw.loader["express-loader"].minable.mining_time = 0.5
 
 
 data:extend{
@@ -166,7 +175,7 @@ xmutil.clone("transport-belt", "transport-belt",
 	{
 		name = "slow-transport-belt",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/slow-transport-belt.png",
-		minable = {hardness = 0.2, mining_time = 0.3, result = "slow-transport-belt"},
+		minable = {mining_time = 0.3, result = "slow-transport-belt"},
 		max_health = 100,
 		animation_speed_coefficient = 32,
 		belt_animation_set = slow_belt_animation_set,
@@ -182,7 +191,7 @@ xmutil.clone("transport-belt", "fast-transport-belt",
 	{
 		name = "expedited-transport-belt",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/expedited-transport-belt.png",
-		minable = {hardness = 0.2, mining_time = 0.3, result = "expedited-transport-belt"},
+		minable = {mining_time = 0.3, result = "expedited-transport-belt"},
 		max_health = 160,
 		animation_speed_coefficient = 32,
 		belt_animation_set = expedited_belt_animation_set,
@@ -203,7 +212,7 @@ xmutil.clone("underground-belt", "underground-belt",
 	{
 		name = "slow-underground-belt",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/slow-underground-belt.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "slow-underground-belt"},
+		minable = {mining_time = 0.5, result = "slow-underground-belt"},
 		belt_animation_set = slow_belt_animation_set,
 		max_health = 100,
 		max_distance = 3,
@@ -224,7 +233,7 @@ xmutil.clone("underground-belt", "fast-underground-belt",
 	{
 		name = "expedited-underground-belt",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/expedited-underground-belt.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "expedited-underground-belt"},
+		minable = {mining_time = 0.5, result = "expedited-underground-belt"},
 		belt_animation_set = expedited_belt_animation_set,
 		max_health = 160,
 		max_distance = 9,
@@ -246,7 +255,7 @@ xmutil.clone("splitter", "splitter",
 		name = "slow-splitter",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/slow-splitter.png",
 		flags = {"placeable-neutral", "player-creation"},
-		minable = {hardness = 0.2, mining_time = 0.5, result = "slow-splitter"},
+		minable = {mining_time = 0.5, result = "slow-splitter"},
 		max_health = 200,
 		belt_animation_set = slow_belt_animation_set,
 		speed = 0.015625,
@@ -266,7 +275,7 @@ xmutil.clone("splitter", "fast-splitter",
 	{
 		name = "expedited-splitter",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/expedited-splitter.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "expedited-splitter"},
+		minable = {mining_time = 0.5, result = "expedited-splitter"},
 		max_health = 320,
 		belt_animation_set = expedited_belt_animation_set,
 		speed = 0.09375,
@@ -283,7 +292,7 @@ xmutil.clone("loader", "fast-loader",
 	{
 		name = "expedited-loader",
 		icon = "__xander-mod-v1__/graphics/item/logistic/belt/expedited-loader.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "expedited-loader"},
+		minable = {mining_time = 0.5, result = "expedited-loader"},
 		max_health = 250,
 		filter_count = 5,
 		animation_speed_coefficient = 32,
