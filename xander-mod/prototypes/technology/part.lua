@@ -40,7 +40,7 @@ data.raw.technology["battery"].prerequisites = {"plastics", "lead-refining", "su
 data.raw.technology["battery"].order = "04-27"
 --Base "steel-axe"
 data.raw.technology["steel-axe"].prerequisites = { "axe_2", "steel-processing", "parts_1" }
-data.raw.technology["steel-axe"].effects = {{ type = "character-mining-speed", modifier = 1 }}
+data.raw.technology["steel-axe"].effects = {{ type = "character-mining-speed", modifier = 0.5 }}
 data.raw.technology["steel-axe"].icon = "__xander-mod-v1__/graphics/technology/production/axe-3.png"
 
 data:extend(
@@ -949,7 +949,7 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 1,
+      modifier = 0.5,
       type = "character-mining-speed"
     }
   },
@@ -958,7 +958,7 @@ data:extend(
     ingredients = {
 			{"basic-science-pack", 1},
     },
-    time = 10
+    time = 20
   },
   order = "04-34",
 },
@@ -970,13 +970,13 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 1,
+      modifier = 0.5,
       type = "character-mining-speed"
     }
   },
   prerequisites = { "axe_1", "automation-science-pack" },
   unit = {
-    count = 10,
+    count = 20,
     ingredients = {
 			{"automation-science-pack", 1},
     },
@@ -992,13 +992,13 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 2,
+      modifier = 0.5,
       type = "character-mining-speed"
     }
   },
   prerequisites = { "steel-axe", "tooling_1" },
   unit = {
-    count = 50,
+    count = 100,
     ingredients = {
 			{"automation-science-pack", 1},
 			{"logistic-science-pack", 1}
@@ -1015,16 +1015,17 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 2,
+      modifier = 1,
       type = "character-mining-speed"
     }
   },
   prerequisites = { "axe_4", "tooling_2" },
   unit = {
-    count = 200,
+    count = 250,
     ingredients = {
 			{"automation-science-pack", 1},
-			{"logistic-science-pack", 1}
+			{"logistic-science-pack", 1},
+			{"chemical-science-pack", 1},
     },
     time = 45
   },
@@ -1038,13 +1039,13 @@ data:extend(
 	icon_size = 32,
   effects = {
     {
-      modifier = 3,
+      modifier = 1,
       type = "character-mining-speed"
     }
   },
   prerequisites = { "axe_5", "tooling_3" },
   unit = {
-    count = 300,
+    count = 500,
     ingredients = {
 			{"automation-science-pack", 1},
 			{"logistic-science-pack", 1},
