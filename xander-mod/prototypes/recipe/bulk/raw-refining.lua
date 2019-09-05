@@ -270,6 +270,7 @@ data:extend(
     name = "smelting-nickel",
 	category = "basic-refining",
 	energy_required = 8,
+	enabled = false,
 	ingredients = {{"garnierite", 2}, {"limestone", 1}},
 	result = "nickel-plate"
 },
