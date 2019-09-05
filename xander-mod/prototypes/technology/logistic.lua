@@ -89,6 +89,10 @@ data.raw.technology["circuit-network"].prerequisites = {"electronics", "rubber-a
 data.raw.technology["circuit-network"].unit = {count = 150, ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}}, time = 30}
 data.raw.technology["circuit-network"].order = "06-47"
 
+--Base "fast-inserter"
+data.raw.technology["fast-inserter"].effects = {}
+data.raw.technology["fast-inserter"].hidden = true
+data.raw.technology["fast-inserter"].prerequisites = {}
 
 data:extend(
 {
