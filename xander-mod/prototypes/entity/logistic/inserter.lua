@@ -8,24 +8,29 @@ data.raw.inserter["burner-inserter"].energy_per_movement = "50KJ"
 data.raw.inserter["burner-inserter"].energy_per_rotation = "50KJ"
 data.raw.inserter["burner-inserter"].energy_source.fuel_category = "crude"
 data.raw.inserter["burner-inserter"].next_upgrade = "inserter-slow"
-
+data.raw.inserter["burner-inserter"].minable.mining_time = 0.5
 --Base "inserter"
+data.raw.inserter["inserter"].minable.mining_time = 0.5
 
 --Base "long-handed-inserter"
 data.raw.inserter["long-handed-inserter"].max_health = 150
 data.raw.inserter["long-handed-inserter"].next_upgrade = "inserter-long-fast"
+data.raw.inserter["long-handed-inserter"].minable.mining_time = 0.5
 
 --Base "fast-inserter"
+data.raw.inserter["fast-inserter"].minable.mining_time = 0.5
 
 --Base "filter-inserter"
 data.raw.inserter["filter-inserter"].next_upgrade = "stack-filter-inserter"
+data.raw.inserter["filter-inserter"].minable.mining_time = 0.5
 
 --Base "stack-inserter"
 data.raw.inserter["stack-inserter"].max_health = 200
+data.raw.inserter["stack-inserter"].minable.mining_time = 0.5
 
 --Base "stack-filter-inserter"
 data.raw.inserter["stack-filter-inserter"].max_health = 200
-
+data.raw.inserter["stack-filter-inserter"].minable.mining_time = 0.5
 
 data:extend(
 {
@@ -42,7 +47,7 @@ xmutil.clone("inserter", "burner-inserter",
 	{
 		name = "inserter-chemical-burner",
 		icon = "__xander-mod-v1__/graphics/item/logistic/inserter/inserter-chemical-burner.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-chemical-burner"},
+		minable = {mining_time = 0.5, result = "inserter-chemical-burner"},
 		energy_source = { fuel_category = "chemical" },
 	}
 ),
@@ -57,7 +62,7 @@ xmutil.clone("inserter", "inserter",
 	{
 		name = "inserter-slow",
 		icon = "__xander-mod-v1__/graphics/item/logistic/inserter/inserter-slow.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-slow"},
+		minable = {mining_time = 0.5, result = "inserter-slow"},
 		max_health = 50,
 		energy_per_movement = "20KJ",
 		energy_per_rotation = "20KJ",
@@ -80,7 +85,7 @@ xmutil.clone("inserter", "fast-inserter",
 	{
 		name = "inserter-long-fast",
 		icon = "__xander-mod-v1__/graphics/item/logistic/inserter/inserter-long-fast.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-fast"},
+		minable = {mining_time = 0.5, result = "inserter-long-fast"},
     pickup_position = {0, -2},
     insert_position = {0, 2.2},
 		energy_per_movement = "10KJ",
@@ -104,7 +109,7 @@ xmutil.clone("inserter", "stack-inserter",
 	{
 		name = "inserter-long-stack",
 		icon = "__xander-mod-v1__/graphics/item/logistic/inserter/inserter-long-stack.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "inserter-long-stack"},
+		minable = {mining_time = 0.5, result = "inserter-long-stack"},
 		max_health = 200,
     pickup_position = {0, -2},
     insert_position = {0, 2.2},

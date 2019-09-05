@@ -12,12 +12,33 @@ data.raw["construction-robot"]["construction-robot"].max_energy = "2MJ"
 
 --Base "roboport"
 data.raw["roboport"]["roboport"].fast_replaceable_group = "roboport"
+data.raw["roboport"]["roboport"].minable.mining_time = 0.5
 
 --Base "wooden-chest"
 data.raw.container["wooden-chest"].next_upgrade = "iron-chest"
+data.raw.container["wooden-chest"].minable.mining_time = 0.2
+
 --Base "iron-chest"
 data.raw.container["iron-chest"].next_upgrade = "steel-chest"
+data.raw.container["iron-chest"].minable.mining_time = 0.4
+
 --Base "steel-chest"
+data.raw.container["steel-chest"].minable.mining_time = 0.6
+
+--Base "logistic-chest-passive-provider"
+data.raw["logistic-container"]["logistic-chest-passive-provider"].minable.mining_time = 0.6
+
+--Base "logistic-chest-active-provider"
+data.raw["logistic-container"]["logistic-chest-active-provider"].minable.mining_time = 0.6
+
+--Base "logistic-chest-storage"
+data.raw["logistic-container"]["logistic-chest-storage"].minable.mining_time = 0.6
+
+--Base "logistic-chest-requester"
+data.raw["logistic-container"]["logistic-chest-requester"].minable.mining_time = 0.6
+
+--Base "logistic-chest-buffer"
+data.raw["logistic-container"]["logistic-chest-buffer"].minable.mining_time = 0.6
 
 data:extend(
 {
@@ -30,7 +51,7 @@ xmutil.clone("logistic-robot", "logistic-robot",
 	{
 		name = "logistic-robot-2",
 		icon = "__xander-mod-v1__/graphics/item/logistic/robot/logistic-robot-2.png",
-		minable = {hardness = 0.1, mining_time = 0.1, result = "logistic-robot-2"},
+		minable = {mining_time = 0.1, result = "logistic-robot-2"},
 		max_health = 150,
 		max_payload_size = 4,
 		speed = 0.2,
@@ -62,7 +83,7 @@ xmutil.clone("construction-robot", "construction-robot",
 	{
 		name = "construction-robot-2",
 		icon = "__xander-mod-v1__/graphics/item/logistic/robot/construction-robot-2.png",
-		minable = {hardness = 0.1, mining_time = 0.1, result = "construction-robot-2"},
+		minable = {mining_time = 0.1, result = "construction-robot-2"},
 		max_health = 400,
 		max_payload_size = 2,
 		speed = 0.1,
@@ -90,7 +111,7 @@ xmutil.clone("roboport", "roboport",
 {
 	name = "roboport-2",
 	icon = "__xander-mod-v1__/graphics/item/logistic/robot/roboport-2.png",
-	minable = {hardness = 0.2, mining_time = 0.5, result = "roboport-2"},
+	minable = {mining_time = 0.5, result = "roboport-2"},
 	max_health = 1000,
 	energy_source = {
 		input_flow_limit = "10MW",

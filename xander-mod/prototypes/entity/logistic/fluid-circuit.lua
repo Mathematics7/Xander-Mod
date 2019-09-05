@@ -391,7 +391,7 @@ local function xm_pipe(material, max_health)
 		{
 			name = "pipe-"..material,
 			icon = "__xander-mod-v1__/graphics/item/logistic/pipe/pipe-"..material..".png",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-"..material},
+			minable = {mining_time = 0.2, result = "pipe-"..material},
 			max_health = max_health,
 			pictures = xm_pipe_pictures(material),
 		})
@@ -403,7 +403,7 @@ local function xm_pipe_to_ground(material, max_health, max_underground_distance)
 		{
 			name = "pipe-to-ground-"..material,
 			icon = "__xander-mod-v1__/graphics/item/logistic/pipe/pipe-to-ground-"..material..".png",
-			minable = {hardness = 0.2, mining_time = 0.5, result = "pipe-to-ground-"..material},
+			minable = {mining_time = 0.2, result = "pipe-to-ground-"..material},
 			max_health = max_health,
 			pictures = xm_pipe_to_ground_pictures(material),
 			fluid_box = {
@@ -416,6 +416,7 @@ end
 
 --Base "pipe"
 data.raw.pipe["pipe"].max_health = 50
+data.raw.pipe["pipe"].minable.mining_time = 0.2
 
 --Base "pipe-to-ground"
 data.raw["pipe-to-ground"]["pipe-to-ground"].max_health = 50
@@ -424,12 +425,16 @@ data.raw["pipe-to-ground"]["pipe-to-ground"].fluid_box.pipe_connections =
 	{position = {0, -1}},
 	{position = {0, 1}, max_underground_distance = 9}
 }
+data.raw["pipe-to-ground"]["pipe-to-ground"].minable.mining_time = 0.2
 
 --Base "storage-tank"
+data.raw["storage-tank"]["storage-tank"].minable.mining_time = 1.5
+
 --Base "pump"
 data.raw.pump["pump"].max_health = 200
 data.raw.pump["pump"].energy_source.emissions_per_second_per_watt = 0.000005
 data.raw.pump["pump"].energy_usage = "20kW"
+data.raw.pump["pump"].minable.mining_time = 1
 
 --Base "arithmetic-combinator"
 --Base "decider-combinator"
