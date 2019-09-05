@@ -44,7 +44,7 @@ data:extend(
 	{
 		{
 			type = "unlock-recipe",
-			recipe = "forging-iron-b"
+			recipe = "forging-iron-c"
 		},
 		{
 			type = "unlock-recipe",
