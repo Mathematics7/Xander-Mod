@@ -4,8 +4,10 @@ local xmutil = require("xmutil")
 
 --Base "stone-wall"
 data.raw.wall["stone-wall"].max_health = 200
+data.raw.wall["stone-wall"].minable.mining_time = 0.5
 --Base "gate"
 data.raw.gate["gate"].max_health = 200
+data.raw.gate["gate"].minable.mining_time = 0.5
 
 --Base "gun-turret"
 --Base "flamethrower-turret"
@@ -28,11 +30,13 @@ data.raw.radar["radar"].max_distance_of_sector_revealed = 10
 data.raw.radar["radar"].max_distance_of_nearby_sector_revealed = 2
 data.raw.radar["radar"].energy_per_nearby_scan = "200kJ"
 data.raw.radar["radar"].fast_replaceable_group = "radar"
+data.raw.radar["radar"].minable.mining_time = 0.5
 
 --Base "car"
 --Base "tank"
 data.raw.car["tank"].consumption = "500kW"
 data.raw.car["tank"].turret_rotation_speed = 0.005
+data.raw.car["tank"].minable.mining_time = 0.5
 
 data:extend(
 {
@@ -265,7 +269,7 @@ xmutil.clone("gate", "gate",
 	{
 		name = "gate-2",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/gate-2.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "gate-2"},
+		minable = {mining_time = 0.5, result = "gate-2"},
 		max_health = 600,
 		opening_speed = 0.08,
     next_upgrade = "gate-3"
@@ -306,7 +310,7 @@ xmutil.clone("gate", "gate",
 	{
 		name = "gate-3",
 		icon = "__xander-mod-v1__/graphics/item/combat/structure/gate-3.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "gate-3"},
+		minable = {mining_time = 0.5, result = "gate-3"},
 		max_health = 1000,
 		opening_speed = 0.08,
 	}
@@ -466,7 +470,7 @@ xmutil.clone("radar", "radar",
 {
 	name = "radar-2",
 	icon = "__xander-mod-v1__/graphics/item/combat/structure/radar-2.png",
-	minable = {hardness = 0.2, mining_time = 0.5, result = "radar-2"},
+	minable = {mining_time = 0.5, result = "radar-2"},
 	max_health = 300,
 	energy_per_sector = "20MJ",
 	max_distance_of_sector_revealed = 31,
@@ -513,7 +517,7 @@ xmutil.clone("radar", "radar",
 {
 	name = "radar-3",
 	icon = "__xander-mod-v1__/graphics/item/combat/structure/radar-3.png",
-	minable = {hardness = 0.2, mining_time = 0.5, result = "radar-3"},
+	minable = {mining_time = 0.5, result = "radar-3"},
 	max_health = 500,
 	energy_per_sector = "10MJ",
 	max_distance_of_sector_revealed = 8,
