@@ -27,18 +27,20 @@ data.raw["assembling-machine"]["chemical-plant"].energy_source =
 }
 data.raw["assembling-machine"]["chemical-plant"].energy_usage = "200kW"
 data.raw["assembling-machine"]["chemical-plant"].fast_replaceable_group = "reactor"
+data.raw["assembling-machine"]["chemical-plant"].minable.mining_time = 0.5
 
 --Base "centrifuge" 
 data.raw["assembling-machine"]["centrifuge"].max_health = 500
 data.raw["assembling-machine"]["centrifuge"].crafting_speed = 0.5
 data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_second_per_watt = 0.000004
 data.raw["assembling-machine"]["centrifuge"].energy_usage = "100kW"
+data.raw["assembling-machine"]["centrifuge"].minable.mining_time = 0.5
 
 --Base "oil-refinery"
 data.raw["assembling-machine"]["oil-refinery"].max_health = 500
 data.raw["assembling-machine"]["oil-refinery"].energy_source.emissions_per_second_per_watt = 0.000004
 data.raw["assembling-machine"]["oil-refinery"].energy_usage = "400kW"
-
+data.raw["assembling-machine"]["oil-refinery"].minable.mining_time = 0.5
 
 data:extend{
 
@@ -58,7 +60,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		name = "reactor-1",
 		icon = "__xander-mod-v1__/graphics/item/production/chemical/reactor-1.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "reactor-1"},
+		minable = {mining_time = 0.5, result = "reactor-1"},
 		max_health = 200,
 		module_specification = xmutil.NIL,
 		crafting_speed = 1,
@@ -89,7 +91,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		name = "reactor-2",
 		icon = "__xander-mod-v1__/graphics/item/production/chemical/reactor-2.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "reactor-2"},
+		minable = {mining_time = 0.5, result = "reactor-2"},
 		max_health = 400,
 		module_specification = { module_slots = 2 },
 		crafting_speed = 2,
@@ -120,7 +122,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		name = "electrolyzer-1",
 		icon = "__xander-mod-v1__/graphics/item/production/chemical/electrolyzer-1.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "electrolyzer-1"},
+		minable = {mining_time = 0.5, result = "electrolyzer-1"},
 		max_health = 200,
 		module_specification = { module_slots = 2 },
 		crafting_speed = 1,
@@ -153,7 +155,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		type = "assembling-machine",
 		name = "electrolyzer-2",
 		icon = "__xander-mod-v1__/graphics/item/production/chemical/electrolyzer-2.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "electrolyzer-2"},
+		minable = {mining_time = 0.5, result = "electrolyzer-2"},
 		max_health = 400,
 		module_specification = { module_slots = 3 },
 		crafting_speed = 2,

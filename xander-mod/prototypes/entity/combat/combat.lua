@@ -36,7 +36,7 @@ data.raw.radar["radar"].minable.mining_time = 0.5
 --Base "tank"
 data.raw.car["tank"].consumption = "500kW"
 data.raw.car["tank"].turret_rotation_speed = 0.005
-data.raw.car["tank"].minable.mining_time = 0.5
+data.raw.car["tank"].minable.mining_time = 1
 
 data:extend(
 {

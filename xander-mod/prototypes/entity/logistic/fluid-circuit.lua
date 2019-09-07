@@ -437,10 +437,19 @@ data.raw.pump["pump"].energy_usage = "20kW"
 data.raw.pump["pump"].minable.mining_time = 1
 
 --Base "arithmetic-combinator"
+data.raw["arithmetic-combinator"]["arithmetic-combinator"].minable.mining_time = 0.5
+
 --Base "decider-combinator"
+data.raw["decider-combinator"]["decider-combinator"].minable.mining_time = 0.5
+
 --Base "constant-combinator"
+data.raw["constant-combinator"]["constant-combinator"].minable.mining_time = 0.5
+
 --Base "power-switch"
+data.raw["power-switch"]["power-switch"].minable.mining_time = 0.5
+
 --Base "programmable-speaker"
+data.raw["programmable-speaker"]["programmable-speaker"].minable.mining_time = 0.5
 
 
 data:extend(

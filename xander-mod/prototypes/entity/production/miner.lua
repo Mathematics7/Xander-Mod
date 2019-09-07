@@ -5,6 +5,7 @@ local xmutil = require("xmutil")
 --Base "offshore-pump"
 data.raw["offshore-pump"]["offshore-pump"].pumping_speed = 10
 data.raw["offshore-pump"]["offshore-pump"].fast_replaceable_group = "offshore-pump"
+data.raw["offshore-pump"]["offshore-pump"].minable.mining_time = 1
 
 --Base "burner-mining-drill"
 data.raw["mining-drill"]["burner-mining-drill"].max_health = 100
@@ -13,6 +14,7 @@ data.raw["mining-drill"]["burner-mining-drill"].energy_source.fuel_category = "c
 data.raw["mining-drill"]["burner-mining-drill"].energy_source.emissions_per_second_per_watt = 0.00001
 data.raw["mining-drill"]["burner-mining-drill"].energy_usage = "200kW"
 data.raw["mining-drill"]["burner-mining-drill"].mining_power = 2
+data.raw["mining-drill"]["burner-mining-drill"].minable.mining_time = 1
 
 --Base "electric-mining-drill"
 data.raw["mining-drill"]["electric-mining-drill"].max_health = 200
@@ -22,11 +24,12 @@ data.raw["mining-drill"]["electric-mining-drill"].energy_source.emissions_per_se
 data.raw["mining-drill"]["electric-mining-drill"].energy_usage = "100kW"
 data.raw["mining-drill"]["electric-mining-drill"].mining_power = 2.5
 data.raw["mining-drill"]["electric-mining-drill"].module_specification = {module_slots = 2}
+data.raw["mining-drill"]["electric-mining-drill"].minable.mining_time = 1
 
 --Base "pumpjack"
 data.raw["mining-drill"]["pumpjack"].energy_usage = "100kW"
 data.raw["mining-drill"]["pumpjack"].fast_replaceable_group = "pumpjack"
-
+data.raw["mining-drill"]["pumpjack"].minable.mining_time = 1
 data:extend(
 {
 
@@ -53,7 +56,7 @@ xmutil.clone("assembling-machine", "assembling-machine-2",
 	{
 		name = "logging-camp",
 		icon = "__xander-mod-v1__/graphics/item/production/miner/logging-camp.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "logging-camp"},
+		minable = {mining_time = 0.5, result = "logging-camp"},
 		max_health = 50,
 		alert_icon_shift = {0, -0.09375},
 		fluid_boxes = {
@@ -238,7 +241,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		name = "ore-processor-0",
 		icon = "__xander-mod-v1__/graphics/item/production/miner/ore-processor-0.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "ore-processor-0"},
+		minable = {mining_time = 0.5, result = "ore-processor-0"},
 		max_health = 100,
 		module_specification = xmutil.NIL,
 		crafting_speed = 0.5,
@@ -280,7 +283,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		name = "ore-processor-1",
 		icon = "__xander-mod-v1__/graphics/item/production/miner/ore-processor-1.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "ore-processor-1"},
+		minable = {mining_time = 0.5, result = "ore-processor-1"},
 		max_health = 200,
 		module_specification = { module_slots = 2 },
 		crafting_speed = 1,

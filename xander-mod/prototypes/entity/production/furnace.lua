@@ -5,12 +5,15 @@ local xmutil = require("xmutil")
 --Base "stone-furnace"
 data.raw.furnace["stone-furnace"].flags = {"player-creation"}
 data.raw.furnace["stone-furnace"].next_upgrade = nil
+data.raw.furnace["stone-furnace"].minable.mining_time = 0.5
 
 --Base "steel-furnace"
 data.raw.furnace["steel-furnace"].flags = {"player-creation"}
+data.raw.furnace["steel-furnace"].minable.mining_time = 0.5
 
 --Base "electric-furnace"
 data.raw.furnace["electric-furnace"].flags = {"player-creation"}
+data.raw.furnace["electric-furnace"].minable.mining_time = 0.5
 
 data:extend(
 {

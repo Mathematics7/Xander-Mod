@@ -2,13 +2,20 @@ local xmutil = require("xmutil")
 
 --Base Overrides
 
---Base "rail" placeholder
---Base "curved-rail" placeholder
+--Base "straight-rail"
+data.raw["straight-rail"]["straight-rail"].minable.mining_time = 0.3
+
+--Base "curved-rail"
+data.raw["curved-rail"]["curved-rail"].minable.mining_time = 0.5
+
 --Base "train-stop"
+data.raw["train-stop"]["train-stop"].minable.mining_time = 0.5
+
 --Base "rail-signal"
---Base "train-stop"
---Base "rail-signal"
+data.raw["rail-signal"]["rail-signal"].minable.mining_time = 0.5
+
 --Base "rail-chain-signal"
+data.raw["rail-chain-signal"]["rail-chain-signal"].minable.mining_time = 0.5
 
 --Base "cargo-wagon"
 data.raw["cargo-wagon"]["cargo-wagon"].minable = {mining_time = 5, result = "cargo-wagon"}
@@ -34,7 +41,7 @@ data.raw.locomotive["locomotive"].burner.fuel_inventory_size = 2
 data:extend(
 {
 
---Base "rail" placeholder
+--Base "straight-rail" placeholder
 --Base "curved-rail" placeholder
 --Base "train-stop" placeholder
 --Base "rail-signal" placeholder

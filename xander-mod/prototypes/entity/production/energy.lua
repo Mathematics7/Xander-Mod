@@ -9,27 +9,33 @@ data.raw.boiler["boiler"].energy_source.effectivity = 1/2
 data.raw.boiler["boiler"].energy_source.emissions_per_second_per_watt = 0.000004
 data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
 data.raw.boiler["boiler"].energy_consumption = "1.8MW"
-
+data.raw.boiler["boiler"].minable.mining_time = 0.5
 
 --Base "heat-exchanger"
 data.raw.boiler["heat-exchanger"].max_health = 500
+data.raw.boiler["heat-exchanger"].minable.mining_time = 0.5
 
 --Base "heat-pipe"
+data.raw["heat-pipe"]["heat-pipe"].minable.mining_time = 0.5
 
 --Base "steam-engine"
+data.raw.generator["steam-engine"].minable.mining_time = 0.5
 
 --Base "steam-turbine"
 data.raw.generator["steam-turbine"].max_health = 400
 data.raw.generator["steam-turbine"].maximum_temperature = 300
 data.raw.generator["steam-turbine"].fast_replaceable_group = "steam-turbine"
+data.raw.generator["steam-turbine"].minable.mining_time = 0.5
 
 --Base "nuclear-reactor"
 data.raw.reactor["nuclear-reactor"].max_health = 1000
 data.raw.reactor["nuclear-reactor"].consumption = "50MW"
+data.raw.reactor["nuclear-reactor"].minable.mining_time = 0.5
 
 --Base "solar-panel"
 data.raw["solar-panel"]["solar-panel"].max_health = 100
 data.raw["solar-panel"]["solar-panel"].production = "45kW"
+data.raw["solar-panel"]["solar-panel"].minable.mining_time = 0.5
 
 --Base "accumulator"
 data.raw.accumulator["accumulator"].max_health = 100
@@ -42,9 +48,11 @@ data.raw.accumulator["accumulator"].energy_source =
 	input_flow_limit = "200kW",
 	output_flow_limit = "200kW"
 }
+data.raw.accumulator["accumulator"].minable.mining_time = 0.5
 
 --Base "small-lamp"
 data.raw.lamp["small-lamp"].fast_replaceable_group = "lamp"
+data.raw.lamp["small-lamp"].minable.mining_time = 0.5
 
 data:extend{
 
@@ -100,7 +108,7 @@ xmutil.clone("boiler", "boiler",
 	{
 		name = "boiler-2",
 		icon = "__xander-mod-v1__/graphics/item/production/energy/boiler-2.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-2"},
+		minable = {mining_time = 0.5, result = "boiler-2"},
 		max_health = 500,
 		fast_replaceable_group = "boiler",
 		target_temperature = 300,
@@ -159,7 +167,7 @@ xmutil.clone("boiler", "boiler",
 	{
 		name = "boiler-4",
 		icon = "__xander-mod-v1__/graphics/item/production/energy/boiler-4.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "boiler-4"},
+		minable = {mining_time = 0.5, result = "boiler-4"},
 		max_health = 500,
 		target_temperature = 110,
 		energy_consumption = "5MW",
@@ -201,7 +209,7 @@ xmutil.clone("generator", "steam-turbine",
 	icon = "__xander-mod-v1__/graphics/item/production/energy/solar-panel-2.png",
 	icon_size = 32,
 	flags = {"placeable-neutral", "player-creation"},
-	minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-2"},
+	minable = {mining_time = 0.5, result = "solar-panel-2"},
 	max_health = 200,
 	corpse = "big-remnants",
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
@@ -230,7 +238,7 @@ xmutil.clone("generator", "steam-turbine",
 	icon = "__xander-mod-v1__/graphics/item/production/energy/solar-panel-3.png",
 	icon_size = 32,
 	flags = {"placeable-neutral", "player-creation"},
-	minable = {hardness = 0.2, mining_time = 0.5, result = "solar-panel-3"},
+	minable = {mining_time = 0.5, result = "solar-panel-3"},
 	max_health = 400,
 	corpse = "big-remnants",
 	collision_box = {{-1.9, -1.9}, {1.9, 1.9}},
@@ -266,7 +274,7 @@ xmutil.clone("accumulator", "accumulator",
 	},
 	{
 		name = "accumulator-2",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "accumulator-2"},
+		minable = {mining_time = 0.5, result = "accumulator-2"},
 		max_health = 200,
 		fast_replaceable_group = "accumulator",
 		energy_source =
@@ -294,7 +302,7 @@ xmutil.clone("lamp", "small-lamp",
 	},
 	{
 		name = "lamp-2",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "lamp-2"},
+		minable = {mining_time = 0.5, result = "lamp-2"},
 		max_health = 200,
 		energy_usage_per_tick = "10KW",
 		light = {intensity = 1.5, size = 60}

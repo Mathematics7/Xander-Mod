@@ -8,7 +8,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 	{
 		name = "machine-tool-0",
 		icon = "__xander-mod-v1__/graphics/item/production/production/machine-tool-0.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "machine-tool-0"},
+		minable = {mining_time = 0.5, result = "machine-tool-0"},
 		max_health = 50,
 		crafting_categories = {"basic-machine", "machine"},
 		crafting_speed = 0.5,
@@ -50,7 +50,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 	{
 		name = "machine-tool-1",
 		icon = "__base__/graphics/icons/assembling-machine-1.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "machine-tool-1"},
+		minable = {mining_time = 0.5, result = "machine-tool-1"},
 		max_health = 100,
 		fluid_boxes = xmutil.assembler_fluid_boxes("machine-tool-1"),
 		crafting_categories = {"basic-machine", "machine"},
@@ -74,7 +74,7 @@ xmutil.clone("assembling-machine", "assembling-machine-2",
 	{
 		name = "machine-tool-2",
 		icon = "__xander-mod-v1__/graphics/item/production/production/machine-tool-2.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "machine-tool-2"},
+		minable = {mining_time = 0.5, result = "machine-tool-2"},
 		max_health = 200,
 		fluid_boxes = xmutil.assembler_fluid_boxes("machine-tool-2"),
 		crafting_categories = {"machine", "advanced-machine"},
@@ -97,7 +97,7 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 	{
 		name = "machine-tool-3",
 		icon = "__xander-mod-v1__/graphics/item/production/production/machine-tool-3.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "machine-tool-3"},
+		minable = {mining_time = 0.5, result = "machine-tool-3"},
 		max_health = 500,
 		fluid_boxes = xmutil.assembler_fluid_boxes("machine-tool-3"),
 		crafting_categories = {"machine", "advanced-machine"},
@@ -122,7 +122,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 	{
 		name = "assembling-machine-0",
 		icon = "__base__/graphics/icons/assembling-machine-1.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-0"},
+		minable = {mining_time = 0.5, result = "assembling-machine-0"},
 		max_health = 100,
 		crafting_categories = {"basic-crafting", "crafting"},
 		crafting_speed = 0.5,
@@ -164,7 +164,7 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 	{
 		name = "assembling-machine-4",
 		icon = "__xander-mod-v1__/graphics/item/production/production/assembling-machine-4.png",
-		minable = {hardness = 0.2, mining_time = 0.5, result = "assembling-machine-4"},
+		minable = {mining_time = 0.5, result = "assembling-machine-4"},
 		max_health = 500,
 		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-4"),
 		crafting_categories = {"crafting", "crafting-with-fluid", "advanced-crafting"},
@@ -292,6 +292,7 @@ data.raw["assembling-machine"]["assembling-machine-1"].energy_source.emissions_p
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "50kW"
 data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-1")
+data.raw["assembling-machine"]["assembling-machine-1"].minable.mining_time = 0.5
 
 --Base "assembling-machine-2"
 data.raw["assembling-machine"]["assembling-machine-2"].icon = "__xander-mod-v1__/graphics/item/production/production/assembling-machine-2.png"
@@ -313,6 +314,7 @@ data.raw["assembling-machine"]["assembling-machine-2"].crafting_speed = 1
 data.raw["assembling-machine"]["assembling-machine-2"].energy_source.emissions_per_second_per_watt = 0.000008
 data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "100kW"
 data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 6
+data.raw["assembling-machine"]["assembling-machine-2"].minable.mining_time = 0.5
 
 --Base "assembling-machine-3"
 data.raw["assembling-machine"]["assembling-machine-3"].icon = "__xander-mod-v1__/graphics/item/production/production/assembling-machine-3.png"
@@ -333,15 +335,18 @@ data.raw["assembling-machine"]["assembling-machine-3"].energy_source.emissions_p
 data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
 data.raw["assembling-machine"]["assembling-machine-3"].module_specification.module_slots = 3
 data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"
+data.raw["assembling-machine"]["assembling-machine-3"].minable.mining_time = 0.5
 
 --Base "lab"
 data.raw.lab["lab"].max_health = 200
 data.raw.lab["lab"].light = {intensity = 1, size = 10, color = {r = 1.0, g = 1.0, b = 1.0}}
 data.raw.lab["lab"].energy_usage = "50kW"
 data.raw.lab["lab"].fast_replaceable_group = "lab"
+data.raw.lab["lab"].minable.mining_time = 1
 
 --Base "beacon"
 data.raw.beacon["beacon"].energy_usage = "500kW"
+data.raw.beacon["beacon"].minable.mining_time = 1
 
 --Base "rocket-silo"
 data.raw["rocket-silo"]["rocket-silo"].ingredient_count = 5
