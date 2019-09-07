@@ -231,11 +231,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-v1-graphics__/graphics/entity/production/ore-processor-0/0.png",
+			"__xander-v1-graphics__/graphics/entity/production/ore-processor-0/cm.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-v1-graphics__/graphics/entity/production/ore-processor-0/hr-0.png",
+			"__xander-v1-graphics__/graphics/entity/production/ore-processor-0/hr.png",
 		},
 	},
 	{
@@ -273,11 +273,11 @@ xmutil.clone("assembling-machine", "chemical-plant",
 	{
 		{
 			"__base__/graphics/entity/chemical-plant/chemical-plant.png",
-			"__xander-v1-graphics__/graphics/entity/production/ore-processor-1/1.png",
+			"__xander-v1-graphics__/graphics/entity/production/ore-processor-1/cm.png",
 		},
 		{
 			"__base__/graphics/entity/chemical-plant/hr-chemical-plant.png",
-			"__xander-v1-graphics__/graphics/entity/production/ore-processor-1/hr-1.png",
+			"__xander-v1-graphics__/graphics/entity/production/ore-processor-1/hr.png",
 		},
 	},
 	{
