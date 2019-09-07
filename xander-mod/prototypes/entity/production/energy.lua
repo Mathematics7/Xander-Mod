@@ -6,7 +6,7 @@ local xmutil = require("xmutil")
 --Base "boiler"
 data.raw.boiler["boiler"].energy_source.fuel_category = "crude"
 data.raw.boiler["boiler"].energy_source.effectivity = 1/2
-data.raw.boiler["boiler"].energy_source.emissions_per_second_per_watt = 0.000004
+data.raw.boiler["boiler"].energy_source.emissions_per_minute = 7.2
 data.raw.boiler["boiler"].fast_replaceable_group = "boiler"
 data.raw.boiler["boiler"].energy_consumption = "1.8MW"
 data.raw.boiler["boiler"].minable.mining_time = 0.5
@@ -115,7 +115,7 @@ xmutil.clone("boiler", "boiler",
 		energy_consumption = "3MW",
 		energy_source = {
 			effectivity = 2/3,
-			emissions_per_second_per_watt = 0.00002,
+			emissions_per_minute = 60,
 		},
 	}
 ),

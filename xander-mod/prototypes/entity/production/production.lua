@@ -18,7 +18,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 			fuel_category = "chemical",
 			effectivity = 1,
 			fuel_inventory_size = 1,
-			emissions_per_second_per_watt = 0.00001,
+			emissions_per_minute = 2,
 			smoke =
 			{
 				{
@@ -55,7 +55,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 		fluid_boxes = xmutil.assembler_fluid_boxes("machine-tool-1"),
 		crafting_categories = {"basic-machine", "machine"},
 		crafting_speed = 1,
-		energy_source = { emissions_per_second_per_watt = 0.00001 },
+		energy_source = { emissions_per_minute = 1 },
 		energy_usage = "100kW",
 		ingredient_count = 4,
 		animation = {
@@ -79,7 +79,7 @@ xmutil.clone("assembling-machine", "assembling-machine-2",
 		fluid_boxes = xmutil.assembler_fluid_boxes("machine-tool-2"),
 		crafting_categories = {"machine", "advanced-machine"},
 		crafting_speed = 2,
-		energy_source = { emissions_per_second_per_watt = 0.000004 },
+		energy_source = { emissions_per_minute = 0.8 },
 		energy_usage = "200kW",
 		animation = {
 			layers = {
@@ -102,7 +102,7 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 		fluid_boxes = xmutil.assembler_fluid_boxes("machine-tool-3"),
 		crafting_categories = {"machine", "advanced-machine"},
 		crafting_speed = 4,
-		energy_source = { emissions_per_second_per_watt = 0.000002 },
+		energy_source = { emissions_per_minute = 0.8 },
 		energy_usage = "400kW",
 		ingredient_count = 8,
 		animation = {
@@ -132,7 +132,7 @@ xmutil.clone("assembling-machine", "assembling-machine-1",
 			fuel_category = "chemical",
 			effectivity = 1,
 			fuel_inventory_size = 1,
-			emissions_per_second_per_watt = 0.00002,
+			emissions_per_minute = 2,
 			smoke =
 			{
 				{
@@ -169,7 +169,7 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-4"),
 		crafting_categories = {"crafting", "crafting-with-fluid", "advanced-crafting"},
 		crafting_speed = 4,
-		energy_source = { emissions_per_second_per_watt = 0.000002 },
+		energy_source = { emissions_per_minute = 0.8 },
 		energy_usage = "400kW",
 		ingredient_count = 8,
 	}
@@ -237,7 +237,7 @@ xmutil.clone("assembling-machine", "assembling-machine-3",
 		fuel_category = "crude",
 		effectivity = 1,
 		fuel_inventory_size = 1,
-		emissions_per_second_per_watt = 0.00001,
+		emissions_per_minute = 1,
 		smoke =
 		{
 			{
@@ -288,7 +288,7 @@ data.raw["assembling-machine"]["assembling-machine-1"].animation = xmutil.merge{
 	}
 }
 --data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories = {"basic-crafting", "crafting"}
-data.raw["assembling-machine"]["assembling-machine-1"].energy_source.emissions_per_second_per_watt = 0.00001
+data.raw["assembling-machine"]["assembling-machine-1"].energy_source.emissions_per_minute = 0.5
 data.raw["assembling-machine"]["assembling-machine-1"].energy_usage = "50kW"
 data.raw["assembling-machine"]["assembling-machine-1"].ingredient_count = 4
 data.raw["assembling-machine"]["assembling-machine-1"].fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-1")
@@ -311,7 +311,7 @@ data.raw["assembling-machine"]["assembling-machine-2"].animation = xmutil.merge{
 }
 --data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories = {"crafting", "crafting-with-fluid"}
 data.raw["assembling-machine"]["assembling-machine-2"].crafting_speed = 1
-data.raw["assembling-machine"]["assembling-machine-2"].energy_source.emissions_per_second_per_watt = 0.000008
+data.raw["assembling-machine"]["assembling-machine-2"].energy_source.emissions_per_minute = 0.8
 data.raw["assembling-machine"]["assembling-machine-2"].energy_usage = "100kW"
 data.raw["assembling-machine"]["assembling-machine-2"].ingredient_count = 6
 data.raw["assembling-machine"]["assembling-machine-2"].minable.mining_time = 0.5
@@ -331,7 +331,7 @@ data.raw["assembling-machine"]["assembling-machine-3"].animation = xmutil.merge{
 	}
 }
 data.raw["assembling-machine"]["assembling-machine-3"].crafting_speed = 2
-data.raw["assembling-machine"]["assembling-machine-3"].energy_source.emissions_per_second_per_watt = 0.000004
+data.raw["assembling-machine"]["assembling-machine-3"].energy_source.emissions_per_minute = 0.8
 data.raw["assembling-machine"]["assembling-machine-3"].energy_usage = "200kW"
 data.raw["assembling-machine"]["assembling-machine-3"].module_specification.module_slots = 3
 data.raw["assembling-machine"]["assembling-machine-3"].next_upgrade = "assembling-machine-4"

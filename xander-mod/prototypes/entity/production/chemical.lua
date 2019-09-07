@@ -12,7 +12,7 @@ data.raw["assembling-machine"]["chemical-plant"].energy_source =
 	fuel_category = "crude",
 	effectivity = 1,
 	fuel_inventory_size = 1,
-	emissions_per_second_per_watt = 0.00001,
+	emissions_per_minute = 2,
 	smoke =
 	{
 		{
@@ -32,13 +32,13 @@ data.raw["assembling-machine"]["chemical-plant"].minable.mining_time = 0.5
 --Base "centrifuge" 
 data.raw["assembling-machine"]["centrifuge"].max_health = 500
 data.raw["assembling-machine"]["centrifuge"].crafting_speed = 0.5
-data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_second_per_watt = 0.000004
+data.raw["assembling-machine"]["centrifuge"].energy_source.emissions_per_minute = 0.4
 data.raw["assembling-machine"]["centrifuge"].energy_usage = "100kW"
 data.raw["assembling-machine"]["centrifuge"].minable.mining_time = 0.5
 
 --Base "oil-refinery"
 data.raw["assembling-machine"]["oil-refinery"].max_health = 500
-data.raw["assembling-machine"]["oil-refinery"].energy_source.emissions_per_second_per_watt = 0.000004
+data.raw["assembling-machine"]["oil-refinery"].energy_source.emissions_per_minute = 1.6
 data.raw["assembling-machine"]["oil-refinery"].energy_usage = "400kW"
 data.raw["assembling-machine"]["oil-refinery"].minable.mining_time = 0.5
 
@@ -68,7 +68,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_second_per_watt = 0.000002
+			emissions_per_minute = 0.4
 		},
 		energy_usage = "200kW",
 		fast_replaceable_group = "reactor",
@@ -99,7 +99,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_second_per_watt = 0.000002
+			emissions_per_minute = 0.8
 		},
 		energy_usage = "400kW",
 		ingredient_count = 6,
@@ -130,7 +130,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_second_per_watt = 0.000002
+			emissions_per_minute = 1
 		},
 		energy_usage = "500kW",
 		ingredient_count = 4,
@@ -163,7 +163,7 @@ xmutil.clone("assembling-machine", "chemical-plant",
 		{
 			type = "electric",
 			usage_priority = "secondary-input",
-			emissions_per_second_per_watt = 0.0000008
+			emissions_per_minute = 0.8
 		},
 		energy_usage = "1MW",
 		ingredient_count = 6,
@@ -200,7 +200,7 @@ xmutil.clone("assembling-machine", "oil-refinery",
 		max_health = 1000,
 		crafting_categories = {"chemistry", "oil-processing", "chemical-plant"},
 		crafting_speed = 4,
-		energy_source = { emissions_per_second_per_watt = 0.000004 },
+		energy_source = { emissions_per_minute = 4 },
 		energy_usage = "1MW",
 		ingredient_count = 8,
 		fluid_boxes = {
